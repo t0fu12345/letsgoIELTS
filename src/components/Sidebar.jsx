@@ -46,18 +46,16 @@ const Sidebar = () => {
             <span className="material-symbols-outlined">help</span>
             Help Center
           </Link>
-          <a 
-            href="#" 
-            onClick={async (e) => {
-              e.preventDefault();
-              await fetch('/api/auth/logout', { method: 'POST' });
-              window.location.href = '/login';
+          <Link 
+            to="/login" 
+            onClick={() => {
+              localStorage.removeItem('letsgoIELTS_user');
             }}
             className="text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-full px-4 py-3 flex items-center gap-3 font-label-lg text-label-lg transition-all"
           >
             <span className="material-symbols-outlined">logout</span>
             Logout
-          </a>
+          </Link>
         </div>
       </nav>
 

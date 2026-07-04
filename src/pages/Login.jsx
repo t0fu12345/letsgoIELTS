@@ -10,25 +10,22 @@ export default function Login() {
   
   const { isLoggedIn } = useAuthSession();
 
-  const handleLogin = async (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
+    const storedUserStr = localStorage.getItem('letsgoIELTS_user');
     
-    try {
-      const res = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
-      });
-      const data = await res.json();
-      
-      if (res.ok) {
-        setError('');
-        navigate('/dashboard');
-      } else {
-        setError(data.error || 'Invalid email or password.');
-      }
-    } catch (err) {
-      setError('An error occurred. Please try again.');
+    if (!storedUserStr) {
+      setError('No account found. Please sign up.');
+      return;
+    }
+    
+    const storedUser = JSON.parse(storedUserStr);
+    
+    if (storedUser.email === email && storedUser.password === password) {
+      setError('');
+      navigate('/dashboard');
+    } else {
+      setError('Invalid email or password.');
     }
   };
 

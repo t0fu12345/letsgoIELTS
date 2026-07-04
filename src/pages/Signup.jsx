@@ -11,7 +11,7 @@ export default function Signup() {
 
   const { isLoggedIn } = useAuthSession();
 
-  const handleSignup = async (e) => {
+  const handleSignup = (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
       setError('Passwords do not match');
@@ -19,22 +19,10 @@ export default function Signup() {
     }
     setError('');
     
-    try {
-      const res = await fetch('/api/auth/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
-      });
-      const data = await res.json();
-      
-      if (res.ok) {
-        navigate('/login');
-      } else {
-        setError(data.error || 'Failed to sign up');
-      }
-    } catch (err) {
-      setError('An error occurred. Please try again.');
-    }
+    // Store in localStorage
+    localStorage.setItem('letsgoIELTS_user', JSON.stringify({ email, password }));
+    // Redirect to login
+    navigate('/login');
   };
 
   return (

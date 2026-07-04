@@ -5,22 +5,9 @@ export function useAuthSession() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const checkSession = async () => {
-      try {
-        const res = await fetch('/api/auth/session');
-        if (res.ok) {
-          setIsLoggedIn(true);
-        } else {
-          setIsLoggedIn(false);
-        }
-      } catch (e) {
-        setIsLoggedIn(false);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    
-    checkSession();
+    const user = localStorage.getItem('letsgoIELTS_user');
+    setIsLoggedIn(!!user);
+    setIsLoading(false);
   }, []);
 
   return { isLoggedIn, isLoading };
