@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>letsgoIELTS - Student Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container": "#edeeef",
+                "tertiary-container": "#a7a5a5",
+                "inverse-on-surface": "#f0f1f2",
+                "footer-background": "#F3C41B",
+                "surface-white": "#FFFFFF",
+                "secondary-fixed": "#ffe08a",
+                "primary-fixed-dim": "#88ceff",
+                "inverse-surface": "#2e3132",
+                "on-tertiary": "#ffffff",
+                "index-number-gray": "#E5E5E5",
+                "on-secondary": "#ffffff",
+                "error-container": "#ffdad6",
+                "surface": "#f8f9fa",
+                "secondary-container": "#ffcf2a",
+                "outline-variant": "#bdc8d2",
+                "surface-container-high": "#e7e8e9",
+                "surface-container-highest": "#e1e3e4",
+                "secondary-fixed-dim": "#f0c116",
+                "on-secondary-fixed": "#241a00",
+                "on-error": "#ffffff",
+                "error": "#ba1a1a",
+                "primary": "#006590",
+                "tertiary-fixed": "#e5e2e1",
+                "on-surface-text": "#1A1A1A",
+                "on-surface-variant": "#3e4850",
+                "surface-tint": "#006590",
+                "on-primary-fixed-variant": "#004c6e",
+                "tertiary": "#5f5e5e",
+                "outline": "#6e7881",
+                "surface-bright": "#f8f9fa",
+                "surface-container-lowest": "#ffffff",
+                "on-error-container": "#93000a",
+                "surface-variant": "#e1e3e4",
+                "surface-container-low": "#f3f4f5",
+                "on-tertiary-fixed": "#1c1b1b",
+                "on-primary": "#ffffff",
+                "background": "#f8f9fa",
+                "on-primary-fixed": "#001e2e",
+                "on-secondary-fixed-variant": "#574400",
+                "inverse-primary": "#88ceff",
+                "secondary": "#745b00",
+                "on-secondary-container": "#705900",
+                "on-background": "#191c1d",
+                "on-tertiary-fixed-variant": "#474746",
+                "primary-fixed": "#c8e6ff",
+                "on-primary-container": "#00405d",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "on-surface": "#191c1d",
+                "on-tertiary-container": "#3b3b3b",
+                "footer-on-surface": "#000000",
+                "primary-container": "#1cb0f6",
+                "surface-dim": "#d9dadb"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "section-padding": "40px",
+                "gutter": "24px",
+                "container-max": "1200px",
+                "nav-height": "64px",
+                "margin-desktop": "auto",
+                "margin-mobile": "16px"
+        },
+        "fontFamily": {
+                "display-lg": ["Nunito Sans"],
+                "headline-lg": ["Nunito Sans"],
+                "body-lg": ["Inter"],
+                "headline-lg-mobile": ["Nunito Sans"],
+                "index-bg": ["Nunito Sans"],
+                "title-lg": ["Inter"],
+                "headline-md": ["Nunito Sans"],
+                "body-md": ["Inter"],
+                "label-lg": ["Inter"]
+        },
+        "fontSize": {
+                "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                "index-bg": ["72px", {"lineHeight": "72px", "fontWeight": "800"}],
+                "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex">
+<!-- Side Navigation Drawer -->
+<nav class="fixed left-0 top-0 h-full w-64 bg-surface-container-low dark:bg-inverse-surface flex flex-col py-4 z-40 hidden md:flex border-r border-surface-container">
+<div class="px-6 mb-8 flex flex-col">
+<span class="font-headline-md text-headline-md font-black text-primary">letsgoIELTS</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant">IELTS Prep Master</span>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<a class="bg-secondary-container text-on-secondary-container rounded-full mx-2 px-4 py-3 flex items-center gap-3 font-label-lg text-label-lg translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+        Dashboard
+      </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-full px-4 py-3 flex items-center gap-3 font-label-lg text-label-lg transition-all hover:bg-surface-container-highest" href="#">
+<span class="material-symbols-outlined">quiz</span>
+        Practice Tests
+      </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-full px-4 py-3 flex items-center gap-3 font-label-lg text-label-lg transition-all hover:bg-surface-container-highest" href="#">
+<span class="material-symbols-outlined">insights</span>
+        Skill Analytics
+      </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-full px-4 py-3 flex items-center gap-3 font-label-lg text-label-lg transition-all hover:bg-surface-container-highest" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+        Lessons
+      </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-full px-4 py-3 flex items-center gap-3 font-label-lg text-label-lg transition-all hover:bg-surface-container-highest" href="#">
+<span class="material-symbols-outlined">settings</span>
+        Settings
+      </a>
+</div>
+<div class="mt-auto flex flex-col gap-2 border-t border-surface-container pt-4">
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-full px-4 py-3 flex items-center gap-3 font-label-lg text-label-lg transition-all" href="#">
+<span class="material-symbols-outlined">help</span>
+        Help Center
+      </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-full px-4 py-3 flex items-center gap-3 font-label-lg text-label-lg transition-all" href="#">
+<span class="material-symbols-outlined">logout</span>
+        Logout
+      </a>
+</div>
+</nav>
+<!-- Mobile Bottom Nav (Simplified for demo) -->
+<nav class="fixed bottom-0 left-0 w-full bg-surface-container-low shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-50 flex md:hidden justify-around py-3">
+<a class="flex flex-col items-center text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-[10px] font-medium mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">quiz</span>
+<span class="text-[10px] font-medium mt-1">Tests</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="text-[10px] font-medium mt-1">Stats</span>
+</a>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 flex flex-col pb-20 md:pb-0">
+<!-- Top App Bar -->
+<header class="sticky top-0 bg-surface/90 backdrop-blur-md z-30 shadow-sm h-nav-height flex items-center justify-between px-margin-mobile md:px-gutter">
+<h1 class="font-title-lg text-title-lg text-on-surface hidden md:block">Dashboard</h1>
+<div class="font-headline-md text-headline-md font-black text-primary md:hidden">letsgoIELTS</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1 font-label-lg text-label-lg text-secondary-container bg-surface-container-highest px-3 py-1.5 rounded-full">
+<span class="text-lg leading-none">🔥</span>
+<span class="text-on-surface font-semibold">12 Days</span>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container-high p-2 rounded-full transition-colors hidden sm:block">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<img class="w-10 h-10 rounded-full object-cover border-2 border-surface-container-high cursor-pointer hover:border-primary transition-colors" data-alt="A smiling young student with a clean haircut, wearing a casual hoodie, brightly lit against a neutral studio background, conveying an optimistic and approachable educational vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtyMHkGLRlPs-2yDpjl1eyXfX5LR0VOWtuJ-gJvOG6kopoobAsWOx6GeYL9uWu-oaANbBnsIMbtpaohLgFiDuBkucpw-K8dg8z7-YcXlfD3BHNhOFvS54VnLq2C6gE10qfXbkHmjmH15wU-t3Ui1VUKuAgwQUaxqL6WsxMAGf08sOzWyhnGTX1yY13YVs5JBMGRwLQlL1XsTielmypKGTLAtxlzwefylQV1ildbGcecwc9pzDsT-7p6zjpfKHs2TwAZK7Metb8FD6y"/>
+</div>
+</header>
+<div class="p-margin-mobile md:p-gutter max-w-container-max mx-auto w-full flex flex-col gap-section-padding">
+<!-- Hero Banner -->
+<section class="relative bg-gradient-to-r from-primary to-primary-container rounded-[24px] shadow-sm overflow-hidden flex flex-col md:flex-row items-center justify-between p-8 md:p-10 text-on-primary group hover:-translate-y-1 transition-transform duration-300">
+<!-- Background Mesh Decoration -->
+<div class="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at top right, rgba(255,255,255,0.8) 0%, transparent 60%);"></div>
+<div class="relative z-10 flex-1 w-full md:w-auto">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-2">Welcome back, Alex!</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim mb-6 md:mb-0">You are 70% closer to your target goal. Keep up the great work!</p>
+</div>
+<div class="relative z-10 flex items-center gap-6 w-full md:w-auto mt-6 md:mt-0">
+<img alt="" class="hidden lg:block h-32 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsVE6QIl2nsf6QPaVHhQehUASXdrt-TtYwrkwVAekawssHA69iolB8unk8Rz3XG6Ahi4z57ZE41dGXmfQiQtVGNamP3Rx3vOa6yweec3agJK1IFRDe5MTzcZT44fTm2m4DlZNKGcwweyJvimHMs72BvN_BFj1f9LTJnv28Fq5VYQdiPMS_EgJKF6nTKyd0VMmxlLfHFW2fMxmZ7URP6vteK_-qUFAzSmEgkSSTmZVoE7ltTsi8cRldc46e1"/>
+<div class="bg-surface-white/10 backdrop-blur-md border border-surface-white/20 rounded-2xl p-6 w-full md:w-64">
+<div class="flex items-center justify-between mb-4">
+<span class="font-title-lg text-title-lg font-semibold">Target: IELTS 7.0</span>
+<span class="material-symbols-outlined text-secondary-container">flag</span>
+</div>
+<div class="w-full bg-surface-white/20 rounded-full h-2.5 mb-2 overflow-hidden">
+<div class="bg-secondary-container h-2.5 rounded-full" style="width: 70%"></div>
+</div>
+<div class="text-right font-label-lg text-label-lg text-primary-fixed-dim">70% Ready</div>
+</div>
+</div>
+</section>
+<!-- AI Analytics Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: Skill Radar Chart -->
+<div class="bg-surface-white border border-outline-variant rounded-[16px] p-6 shadow-sm flex flex-col hover:-translate-y-1 transition-transform duration-300">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">radar</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Skill Balance</h3>
+</div>
+<div class="flex-1 flex items-center justify-center relative min-h-[200px]">
+<!-- Simulated Radar Chart with SVG -->
+<svg class="max-w-[200px] overflow-visible" height="100%" viewbox="0 0 200 200" width="100%">
+<polygon fill="none" points="100,20 180,100 100,180 20,100" stroke="#e1e3e4" stroke-width="1"></polygon>
+<polygon fill="none" points="100,40 160,100 100,160 40,100" stroke="#e1e3e4" stroke-width="1"></polygon>
+<polygon fill="none" points="100,60 140,100 100,140 60,100" stroke="#e1e3e4" stroke-width="1"></polygon>
+<!-- Data Polygon -->
+<polygon fill="rgba(28, 176, 246, 0.2)" points="100,40 160,100 100,140 50,100" stroke="#1cb0f6" stroke-width="2"></polygon>
+<!-- Labels -->
+<text class="text-[10px] fill-on-surface-variant font-medium" text-anchor="middle" x="100" y="10">Reading</text>
+<text class="text-[10px] fill-on-surface-variant font-medium" text-anchor="start" x="190" y="105">Listening</text>
+<text class="text-[10px] fill-on-surface-variant font-medium" text-anchor="middle" x="100" y="195">Writing</text>
+<text class="text-[10px] fill-on-surface-variant font-medium" text-anchor="end" x="10" y="105">Speaking</text>
+</svg>
+</div>
+</div>
+<!-- Card 2: Estimated Band Scores -->
+<div class="bg-surface-white border border-outline-variant rounded-[16px] p-6 shadow-sm flex flex-col hover:-translate-y-1 transition-transform duration-300">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Estimated Scores</h3>
+</div>
+<div class="grid grid-cols-2 gap-4 flex-1">
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center justify-center relative">
+<span class="font-label-lg text-label-lg text-on-surface-variant mb-1">Listening</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">6.5</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center justify-center relative">
+<span class="font-label-lg text-label-lg text-on-surface-variant mb-1">Reading</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">7.0</span>
+</div>
+<div class="bg-error-container/30 border border-error/20 rounded-xl p-4 flex flex-col items-center justify-center relative">
+<span class="font-label-lg text-label-lg text-on-surface-variant mb-1">Writing</span>
+<span class="font-headline-md text-headline-md font-bold text-error">6.0</span>
+<div class="absolute -top-2 -right-2 bg-error text-on-error text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm">Needs focus</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col items-center justify-center relative">
+<span class="font-label-lg text-label-lg text-on-surface-variant mb-1">Speaking</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">6.5</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Weekly Activity -->
+<div class="bg-surface-white border border-outline-variant rounded-[16px] p-6 shadow-sm flex flex-col hover:-translate-y-1 transition-transform duration-300 lg:col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">bar_chart</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Weekly Activity</h3>
+</div>
+<div class="flex-1 flex items-end justify-between gap-2 mt-auto h-[150px] pb-6 relative">
+<!-- Bars -->
+<div class="w-full flex flex-col items-center gap-2"><div class="w-full bg-primary-container/40 rounded-t-sm h-[40%]"></div><span class="text-xs text-on-surface-variant">M</span></div>
+<div class="w-full flex flex-col items-center gap-2"><div class="w-full bg-primary-container/60 rounded-t-sm h-[60%]"></div><span class="text-xs text-on-surface-variant">T</span></div>
+<div class="w-full flex flex-col items-center gap-2"><div class="w-full bg-primary rounded-t-sm h-[90%]"></div><span class="text-xs text-on-surface-variant">W</span></div>
+<div class="w-full flex flex-col items-center gap-2"><div class="w-full bg-primary-container/30 rounded-t-sm h-[30%]"></div><span class="text-xs text-on-surface-variant">T</span></div>
+<div class="w-full flex flex-col items-center gap-2"><div class="w-full bg-primary-container/80 rounded-t-sm h-[75%]"></div><span class="text-xs text-on-surface-variant">F</span></div>
+<div class="w-full flex flex-col items-center gap-2"><div class="w-full bg-surface-container-highest rounded-t-sm h-[10%]"></div><span class="text-xs text-on-surface-variant">S</span></div>
+<div class="w-full flex flex-col items-center gap-2"><div class="w-full bg-surface-container-highest rounded-t-sm h-[5%]"></div><span class="text-xs text-on-surface-variant">S</span></div>
+</div>
+</div>
+</section>
+<!-- Up Next (AI Recommendations) -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Recommended by AI</h2>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-4 pb-4 -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0">
+<!-- Card 1 -->
+<div class="min-w-[280px] md:min-w-[320px] bg-surface-white border-2 border-primary/20 rounded-[16px] p-6 shadow-sm flex flex-col gap-4 hover:shadow-md hover:-translate-y-1 hover:border-primary transition-all duration-300 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-[100px] -z-0"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="bg-error-container text-on-error-container p-2 rounded-lg">
+<span class="material-symbols-outlined">edit_square</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-error bg-error-container/50 px-2 py-1 rounded-full">High Priority</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-title-lg text-title-lg font-bold text-on-surface mb-1">Boost your Writing Task 2</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Focus on developing clear arguments and cohesive paragraph structures to improve from Band 6.0.</p>
+</div>
+<button class="mt-auto bg-primary text-on-primary font-label-lg text-label-lg py-2.5 px-4 rounded-full w-full hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+              Start Practice <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[280px] md:min-w-[320px] bg-surface-white border border-outline-variant rounded-[16px] p-6 shadow-sm flex flex-col gap-4 hover:shadow-md hover:-translate-y-1 hover:border-primary/50 transition-all duration-300">
+<div class="flex items-start justify-between">
+<div class="bg-primary-container/20 text-primary p-2 rounded-lg">
+<span class="material-symbols-outlined">headphones</span>
+</div>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg font-bold text-on-surface mb-1">Cambridge 18 - Listening Test 2</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Continue where you left off. This mock test targets multiple-choice question formats.</p>
+</div>
+<button class="mt-auto border border-outline text-on-surface font-label-lg text-label-lg py-2.5 px-4 rounded-full w-full hover:bg-surface-container-high transition-colors">
+              Resume Test
+            </button>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[280px] md:min-w-[320px] bg-surface-white border border-outline-variant rounded-[16px] p-6 shadow-sm flex flex-col gap-4 hover:shadow-md hover:-translate-y-1 hover:border-primary/50 transition-all duration-300">
+<div class="flex items-start justify-between">
+<div class="bg-secondary-container/30 text-on-secondary-container p-2 rounded-lg">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg font-bold text-on-surface mb-1">Review 20 new Vocabulary words</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Spaced repetition time! Review the Academic Word List items you saved yesterday.</p>
+</div>
+<button class="mt-auto text-primary font-label-lg text-label-lg py-2.5 px-4 rounded-full w-full hover:bg-primary/10 transition-colors">
+              Open Notebook
+            </button>
+</div>
+</div>
+</section>
+<!-- Recent Tests List -->
+<section class="flex flex-col gap-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">Recent Tests</h2>
+<div class="bg-surface-white border border-outline-variant rounded-[16px] overflow-hidden flex flex-col">
+<!-- List Item 1 -->
+<div class="flex items-center justify-between p-4 md:p-6 border-b border-surface-container hover:bg-surface-container-lowest transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="bg-surface-container p-3 rounded-full hidden md:block">
+<span class="material-symbols-outlined text-on-surface-variant">assignment</span>
+</div>
+<div>
+<h4 class="font-title-lg text-[18px] font-semibold text-on-surface">IELTS Mock Test #4</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">2 days ago</p>
+</div>
+</div>
+<div class="flex items-center gap-4 md:gap-8">
+<div class="text-right">
+<div class="font-body-md text-[12px] text-on-surface-variant">Overall</div>
+<div class="font-headline-md text-[20px] font-bold text-primary">6.5</div>
+</div>
+<button class="hidden md:flex items-center gap-1 text-primary font-label-lg hover:underline opacity-0 group-hover:opacity-100 transition-opacity">
+                View AI Feedback <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex items-center justify-between p-4 md:p-6 border-b border-surface-container hover:bg-surface-container-lowest transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="bg-surface-container p-3 rounded-full hidden md:block">
+<span class="material-symbols-outlined text-on-surface-variant">assignment</span>
+</div>
+<div>
+<h4 class="font-title-lg text-[18px] font-semibold text-on-surface">Reading Practice Set A</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">5 days ago</p>
+</div>
+</div>
+<div class="flex items-center gap-4 md:gap-8">
+<div class="text-right">
+<div class="font-body-md text-[12px] text-on-surface-variant">Score</div>
+<div class="font-headline-md text-[20px] font-bold text-primary">7.0</div>
+</div>
+<button class="hidden md:flex items-center gap-1 text-primary font-label-lg hover:underline opacity-0 group-hover:opacity-100 transition-opacity">
+                View AI Feedback <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex items-center justify-between p-4 md:p-6 hover:bg-surface-container-lowest transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="bg-surface-container p-3 rounded-full hidden md:block">
+<span class="material-symbols-outlined text-on-surface-variant">assignment</span>
+</div>
+<div>
+<h4 class="font-title-lg text-[18px] font-semibold text-on-surface">Writing Task 1 - Bar Chart</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">1 week ago</p>
+</div>
+</div>
+<div class="flex items-center gap-4 md:gap-8">
+<div class="text-right">
+<div class="font-body-md text-[12px] text-on-surface-variant">Score</div>
+<div class="font-headline-md text-[20px] font-bold text-error">6.0</div>
+</div>
+<button class="hidden md:flex items-center gap-1 text-primary font-label-lg hover:underline opacity-0 group-hover:opacity-100 transition-opacity">
+                View AI Feedback <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>

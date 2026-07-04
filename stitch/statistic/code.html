@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Performance Analytics - IELTS Prep</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Nunito+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#00405d",
+                    "surface-variant": "#e1e3e4",
+                    "on-error-container": "#93000a",
+                    "outline": "#6e7881",
+                    "surface-dim": "#d9dadb",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "on-surface-variant": "#3e4850",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#ffe08a",
+                    "surface-container-low": "#f3f4f5",
+                    "on-background": "#191c1d",
+                    "footer-background": "#F3C41B",
+                    "primary": "#006590",
+                    "surface-container": "#edeeef",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "on-primary-fixed": "#001e2e",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#2e3132",
+                    "tertiary": "#5f5e5e",
+                    "on-surface-text": "#1A1A1A",
+                    "tertiary-container": "#a7a5a5",
+                    "secondary-container": "#ffcf2a",
+                    "index-number-gray": "#E5E5E5",
+                    "secondary-fixed-dim": "#f0c116",
+                    "surface-container-high": "#e7e8e9",
+                    "outline-variant": "#bdc8d2",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-white": "#FFFFFF",
+                    "primary-fixed": "#c8e6ff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-secondary-fixed-variant": "#574400",
+                    "surface-tint": "#006590",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#191c1d",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#241a00",
+                    "tertiary-fixed": "#e5e2e1",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "primary-fixed-dim": "#88ceff",
+                    "on-tertiary-container": "#3b3b3b",
+                    "on-secondary-container": "#705900",
+                    "on-primary": "#ffffff",
+                    "background": "#f8f9fa",
+                    "surface-bright": "#f8f9fa",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "surface": "#f8f9fa",
+                    "inverse-primary": "#88ceff",
+                    "footer-on-surface": "#000000",
+                    "primary-container": "#1cb0f6",
+                    "secondary": "#745b00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "container-max": "1200px",
+                    "nav-height": "64px",
+                    "margin-desktop": "auto",
+                    "section-padding": "80px"
+            },
+            "fontFamily": {
+                    "label-lg": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Nunito Sans"
+                    ],
+                    "display-lg": [
+                            "Nunito Sans"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "index-bg": [
+                            "Nunito Sans"
+                    ],
+                    "headline-md": [
+                            "Nunito Sans"
+                    ],
+                    "title-lg": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Nunito Sans"
+                    ]
+            },
+            "fontSize": {
+                    "label-lg": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.1px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg": [
+                            "57px",
+                            {
+                                    "lineHeight": "64px",
+                                    "letterSpacing": "-0.25px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.25px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "letterSpacing": "0.5px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "index-bg": [
+                            "72px",
+                            {
+                                    "lineHeight": "72px",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-md": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "title-lg": [
+                            "22px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .elevation-1 { box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.08); }
+        .elevation-2 { box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.12); }
+        .heatmap-cell { width: 14px; height: 14px; border-radius: 2px; }
+        .heatmap-level-0 { background-color: #ebedf0; }
+        .heatmap-level-1 { background-color: #c6e48b; }
+        .heatmap-level-2 { background-color: #7bc96f; }
+        .heatmap-level-3 { background-color: #239a3b; }
+        .heatmap-level-4 { background-color: #196127; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="h-full w-64 fixed left-0 top-0 shadow-sm bg-surface dark:bg-on-background flex flex-col h-full py-gutter px-4 z-20 hidden md:flex">
+<div class="mb-8 flex items-center gap-3 px-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-headline-md">
+                I
+            </div>
+<div>
+<h1 class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed">IELTS Prep</h1>
+<p class="font-label-lg text-label-lg text-on-surface-variant">Academic Level</p>
+</div>
+</div>
+<div class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary dark:text-surface-variant hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary dark:text-surface-variant hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-label-lg text-label-lg">Practice Tests</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-primary font-bold border-r-4 border-primary bg-primary/10" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+<span class="font-label-lg text-label-lg">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary dark:text-surface-variant hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-label-lg text-label-lg">Lessons</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary dark:text-surface-variant hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</div>
+<div class="mt-auto pt-6">
+<button class="w-full bg-primary text-on-primary font-label-lg text-label-lg py-3 rounded-full hover:-translate-y-0.5 transition-transform elevation-1 uppercase">
+                UPGRADE PRO
+            </button>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 md:ml-64 flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky shadow-sm backdrop-blur-md bg-surface/80 dark:bg-background/80 elevation-1 shadow-sm flex justify-between items-center h-nav-height px-gutter z-10">
+<div class="flex items-center gap-4">
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-on-surface-variant p-2 hover:bg-surface-variant/50 rounded-full transition-all">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h2 class="font-headline-md text-headline-md font-bold text-primary">Performance Analytics</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="pl-10 pr-4 py-2 rounded-full border border-outline bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all w-64 text-body-md" placeholder="Search..." type="text"/>
+</div>
+<div class="flex items-center gap-2 bg-surface-variant/30 px-3 py-1.5 rounded-full">
+<span class="text-error font-bold">🔥 12 Days</span>
+</div>
+<button class="p-2 text-on-surface-variant hover:bg-surface-variant/50 rounded-full transition-all relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-variant/50 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 p-margin-mobile md:p-gutter max-w-container-max mx-auto w-full space-y-8 py-8">
+<!-- Band Score Trend -->
+<section class="bg-surface-white rounded-xl elevation-1 p-6 relative overflow-hidden group hover:-translate-y-0.5 transition-transform">
+<div class="absolute -bottom-4 -right-4 font-index-bg text-index-bg text-index-number-gray/30 pointer-events-none select-none z-0">01</div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1">Band Score Trend</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Your progress over the last 10 practice tests.</p>
+</div>
+<div class="bg-primary/10 text-primary px-4 py-2 rounded-full font-label-lg text-label-lg">
+                            Current Average: <span class="font-bold">6.8</span>
+</div>
+</div>
+<div class="w-full h-64">
+<canvas id="trendChart"></canvas>
+</div>
+</div>
+</section>
+<!-- Grid Layout for Radar & Heatmap -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Skill Breakdown (Radar) -->
+<section class="bg-surface-white rounded-xl elevation-1 p-6 relative overflow-hidden hover:-translate-y-0.5 transition-transform">
+<div class="absolute -bottom-4 -right-4 font-index-bg text-index-bg text-index-number-gray/30 pointer-events-none select-none z-0">02</div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="mb-4">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1">Skill Breakdown</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Identifying strengths and bottlenecks.</p>
+</div>
+<div class="flex-1 flex items-center justify-center min-h-[300px]">
+<canvas id="radarChart"></canvas>
+</div>
+<div class="mt-4 flex flex-wrap gap-2 justify-center">
+<span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-label-lg text-label-lg text-xs">Reading: Strong</span>
+<span class="px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-lg text-label-lg text-xs flex items-center gap-1 border border-error/20">
+<span class="material-symbols-outlined text-[16px]">warning</span> Writing: Bottleneck
+                            </span>
+</div>
+</div>
+</section>
+<!-- Practice Heatmap -->
+<section class="bg-surface-white rounded-xl elevation-1 p-6 relative overflow-hidden hover:-translate-y-0.5 transition-transform">
+<div class="absolute -bottom-4 -right-4 font-index-bg text-index-bg text-index-number-gray/30 pointer-events-none select-none z-0">03</div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="mb-4 flex justify-between items-end">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-1">Study Consistency</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Daily practice intensity (Last 30 days).</p>
+</div>
+<div class="text-right">
+<div class="font-headline-md text-headline-md font-bold text-primary">87%</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant text-xs">Consistency Score</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-center overflow-x-auto pb-4">
+<!-- Simulated Heatmap Grid -->
+<div class="flex flex-col gap-1 min-w-max mx-auto">
+<div class="flex gap-1 text-xs text-on-surface-variant mb-1 ml-6">
+<div class="w-14">Mon</div>
+<div class="w-14">Wed</div>
+<div class="w-14">Fri</div>
+</div>
+<div class="flex gap-1">
+<div class="w-5 text-xs text-on-surface-variant flex items-center">M</div>
+<div class="flex gap-1" id="heatmap-row-1"></div>
+</div>
+<div class="flex gap-1 mt-1">
+<div class="w-5 text-xs text-on-surface-variant flex items-center">T</div>
+<div class="flex gap-1" id="heatmap-row-2"></div>
+</div>
+<div class="flex gap-1 mt-1">
+<div class="w-5 text-xs text-on-surface-variant flex items-center">W</div>
+<div class="flex gap-1" id="heatmap-row-3"></div>
+</div>
+<div class="flex gap-1 mt-1">
+<div class="w-5 text-xs text-on-surface-variant flex items-center">T</div>
+<div class="flex gap-1" id="heatmap-row-4"></div>
+</div>
+<div class="flex gap-1 mt-1">
+<div class="w-5 text-xs text-on-surface-variant flex items-center">F</div>
+<div class="flex gap-1" id="heatmap-row-5"></div>
+</div>
+<div class="flex gap-1 mt-1">
+<div class="w-5 text-xs text-on-surface-variant flex items-center">S</div>
+<div class="flex gap-1" id="heatmap-row-6"></div>
+</div>
+<div class="flex gap-1 mt-1">
+<div class="w-5 text-xs text-on-surface-variant flex items-center">S</div>
+<div class="flex gap-1" id="heatmap-row-7"></div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 mt-4 text-xs text-on-surface-variant">
+<span>Less</span>
+<div class="heatmap-cell heatmap-level-0"></div>
+<div class="heatmap-cell heatmap-level-1"></div>
+<div class="heatmap-cell heatmap-level-2"></div>
+<div class="heatmap-cell heatmap-level-3"></div>
+<div class="heatmap-cell heatmap-level-4"></div>
+<span>More</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- AI Deep Insights Section -->
+<section class="mt-8">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">AI Deep Insights</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Writing Insights Card -->
+<div class="border border-outline-variant rounded-xl p-6 bg-surface-white hover:bg-surface-container-lowest transition-colors flex flex-col">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center text-error">
+<span class="material-symbols-outlined">edit_note</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Writing Task 2</h4>
+<p class="font-label-lg text-label-lg text-on-surface-variant text-sm">Grammatical Range</p>
+</div>
+</div>
+</div>
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-lg text-label-lg text-xs border border-error/20">Articles (a/an/the)</span>
+<span class="px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-lg text-label-lg text-xs border border-error/20">Repetition</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">
+                            Your recent essays show a consistent pattern of dropping definite articles before specific nouns. Additionally, you often repeat the word "important" instead of using synonyms like "crucial" or "vital".
+                        </p>
+<button class="w-full py-2.5 rounded-lg border-2 border-primary text-primary font-label-lg text-label-lg hover:bg-primary/5 transition-colors">
+                            Review Grammar Exercises
+                        </button>
+</div>
+<!-- Speaking Insights Card -->
+<div class="border border-outline-variant rounded-xl p-6 bg-surface-white hover:bg-surface-container-lowest transition-colors flex flex-col">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">record_voice_over</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Speaking Part 2</h4>
+<p class="font-label-lg text-label-lg text-on-surface-variant text-sm">Fluency &amp; Pronunciation</p>
+</div>
+</div>
+</div>
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-lg text-label-lg text-xs border border-outline/20">Th- sounds</span>
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-lg text-label-lg text-xs border border-outline/20">Hesitation</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">
+                            Audio analysis indicates slight difficulty with unvoiced 'th' sounds (e.g., 'think', 'through'). There are also noticeable pauses longer than 2 seconds when transitioning between main ideas.
+                        </p>
+<button class="w-full py-2.5 rounded-lg border-2 border-outline text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-variant/20 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">mic</span> Practice Pronunciation
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-footer-background w-full mt-auto text-footer-on-surface flat grid grid-cols-1 md:grid-cols-3 gap-gutter px-gutter py-10 z-10">
+<div class="flex flex-col gap-4">
+<span class="font-headline-sm text-headline-sm font-black text-2xl">IELTS Analytics</span>
+<p class="font-body-md text-body-md opacity-80 text-sm max-w-xs">Empowering students to achieve their target band scores through data-driven insights.</p>
+</div>
+<div class="flex flex-col gap-3 md:items-center">
+<h4 class="font-title-lg text-title-lg font-bold mb-2">Legal</h4>
+<a class="font-body-md text-body-md opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md opacity-80 hover:opacity-100 transition-opacity" href="#">Help Center</a>
+</div>
+<div class="flex flex-col gap-4 md:items-end">
+<div class="flex gap-3">
+<a class="w-10 h-10 rounded border border-footer-on-surface/30 flex items-center justify-center hover:bg-footer-on-surface hover:text-footer-background transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded border border-footer-on-surface/30 flex items-center justify-center hover:bg-footer-on-surface hover:text-footer-background transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+<p class="font-body-md text-body-md opacity-80 mt-auto text-sm">© 2024 IELTS Analytics. All rights reserved.</p>
+</div>
+</footer>
+</div>
+<!-- Chart Scripts -->
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Trend Chart
+            const ctxTrend = document.getElementById('trendChart').getContext('2d');
+            new Chart(ctxTrend, {
+                type: 'line',
+                data: {
+                    labels: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10'],
+                    datasets: [
+                        {
+                            label: 'Actual Score',
+                            data: [5.5, 6.0, 6.0, 6.5, 6.5, 7.0, 6.5, 7.0, 7.0, 7.5],
+                            borderColor: '#1cb0f6', // Primary color
+                            backgroundColor: 'rgba(28, 176, 246, 0.1)',
+                            borderWidth: 3,
+                            tension: 0.4, // Smooth curve
+                            fill: true,
+                            pointBackgroundColor: '#fff',
+                            pointBorderColor: '#1cb0f6',
+                            pointBorderWidth: 2,
+                            pointRadius: 4
+                        },
+                        {
+                            label: 'Target (7.0)',
+                            data: [7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0],
+                            borderColor: '#ffcf2a', // Secondary container yellow
+                            borderWidth: 2,
+                            borderDash: [5, 5],
+                            pointRadius: 0,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top', align: 'end', labels: { usePointStyle: true, boxWidth: 8, font: { family: 'Inter', size: 12 } } }
+                    },
+                    scales: {
+                        y: { min: 4.0, max: 9.0, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { stepSize: 0.5, font: { family: 'Inter' } } },
+                        x: { grid: { display: false }, ticks: { font: { family: 'Inter' } } }
+                    }
+                }
+            });
+
+            // Radar Chart
+            const ctxRadar = document.getElementById('radarChart').getContext('2d');
+            new Chart(ctxRadar, {
+                type: 'radar',
+                data: {
+                    labels: ['Listening', 'Reading', 'Speaking', 'Writing'],
+                    datasets: [{
+                        label: 'Current Score',
+                        data: [7.5, 8.0, 6.5, 5.5],
+                        backgroundColor: 'rgba(28, 176, 246, 0.2)',
+                        borderColor: '#1cb0f6',
+                        pointBackgroundColor: ['#1cb0f6', '#1cb0f6', '#1cb0f6', '#ba1a1a'], // Highlight writing point in red
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#1cb0f6',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(0,0,0,0.1)' },
+                            grid: { color: 'rgba(0,0,0,0.1)' },
+                            pointLabels: {
+                                font: { family: 'Inter', size: 13, weight: 500 },
+                                color: (context) => context.label === 'Writing' ? '#ba1a1a' : '#3e4850' // Highlight writing label
+                            },
+                            ticks: { min: 0, max: 9, stepSize: 1, display: false }
+                        }
+                    }
+                }
+            });
+
+            // Populate Dummy Heatmap
+            const generateHeatmapRow = (rowId) => {
+                const container = document.getElementById(rowId);
+                for(let i=0; i<15; i++) {
+                    const level = Math.floor(Math.random() * 5); // 0-4
+                    const div = document.createElement('div');
+                    div.className = `heatmap-cell heatmap-level-${level}`;
+                    container.appendChild(div);
+                }
+            };
+            for(let i=1; i<=7; i++){ generateHeatmapRow(`heatmap-row-${i}`); }
+        });
+    </script>
+</body></html>

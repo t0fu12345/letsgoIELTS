@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>letsgoIELTS - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Nunito+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#745b00",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#004c6e",
+                        "on-secondary-container": "#705900",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container-high": "#e7e8e9",
+                        "on-surface-text": "#1A1A1A",
+                        "inverse-primary": "#88ceff",
+                        "footer-on-surface": "#000000",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "outline": "#6e7881",
+                        "background": "#f8f9fa",
+                        "secondary-container": "#ffcf2a",
+                        "surface-container": "#edeeef",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-tint": "#006590",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#191c1d",
+                        "secondary-fixed-dim": "#f0c116",
+                        "outline-variant": "#bdc8d2",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-secondary": "#ffffff",
+                        "footer-background": "#F3C41B",
+                        "inverse-surface": "#2e3132",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary": "#5f5e5e",
+                        "on-secondary-fixed-variant": "#574400",
+                        "on-primary-container": "#00405d",
+                        "secondary-fixed": "#ffe08a",
+                        "primary": "#006590",
+                        "primary-container": "#1cb0f6",
+                        "surface": "#f8f9fa",
+                        "on-background": "#191c1d",
+                        "on-tertiary-container": "#3b3b3b",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "on-surface-variant": "#3e4850",
+                        "index-number-gray": "#E5E5E5",
+                        "surface-white": "#FFFFFF",
+                        "on-primary-fixed": "#001e2e",
+                        "primary-fixed": "#c8e6ff",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed-dim": "#88ceff",
+                        "tertiary-container": "#a7a5a5",
+                        "surface-bright": "#f8f9fa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "auto",
+                        "nav-height": "64px",
+                        "section-padding": "80px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Nunito Sans"],
+                        "headline-md": ["Nunito Sans"],
+                        "title-lg": ["Inter"],
+                        "index-bg": ["Nunito Sans"],
+                        "label-lg": ["Inter"],
+                        "headline-lg-mobile": ["Nunito Sans"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Nunito Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "index-bg": ["72px", { "lineHeight": "72px", "fontWeight": "800" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "display-lg": ["57px", { "lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .mesh-gradient {
+            background-color: #1cb0f6;
+            background-image: 
+                radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+                radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+                radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+            opacity: 0.8;
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen flex items-center justify-center font-body-md text-on-surface">
+<div class="w-full min-h-screen flex flex-col md:flex-row">
+<!-- Left Column (Brand) -->
+<div class="hidden md:flex md:w-1/2 relative bg-primary-container flex-col justify-between p-12 overflow-hidden" style="background-color: #1CB0F6;">
+<!-- Subtle Mesh Background -->
+<!-- Top Left: Logo -->
+<div class="relative z-10">
+<span class="font-headline-lg text-headline-lg text-on-primary tracking-tight">letsgoIELTS</span>
+</div>
+<!-- Center: 3D Illustration -->
+<div class="relative z-10 flex-grow flex items-center justify-center">
+<img alt="IELTS Journey Illustration" class="max-w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsVE6QIl2nsf6QPaVHhQehUASXdrt-TtYwrkwVAekawssHA69iolB8unk8Rz3XG6Ahi4z57ZE41dGXmfQiQtVGNamP3Rx3vOa6yweec3agJK1IFRDe5MTzcZT44fTm2m4DlZNKGcwweyJvimHMs72BvN_BFj1f9LTJnv28Fq5VYQdiPMS_EgJKF6nTKyd0VMmxlLfHFW2fMxmZ7URP6vteK_-qUFAzSmEgkSSTmZVoE7ltTsi8cRldc46e1" style="mix-blend-mode: multiply; filter: contrast(1.1); background-color: transparent; border: none; box-shadow: none;"/>
+</div>
+<!-- Bottom: Quote -->
+<div class="relative z-10 mt-8 mx-auto">
+<p class="font-title-lg text-title-lg text-on-primary max-w-md text-center">"Welcome back! Your IELTS journey awaits."</p>
+</div>
+</div>
+<!-- Right Column (Form) -->
+<div class="w-full md:w-1/2 bg-surface-white flex flex-col justify-center px-8 sm:px-12 md:px-24 py-12 md:py-0">
+<div class="max-w-md w-full mx-auto space-y-8">
+<!-- Header -->
+<div class="text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-on-surface-text mb-2">Welcome Back</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Please enter your details to sign in.</p>
+</div>
+<!-- Form -->
+<form class="space-y-6">
+<!-- Email Field -->
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">mail</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 border border-outline rounded-lg bg-transparent text-on-surface focus:ring-primary focus:border-primary font-body-lg text-body-lg transition-colors peer" id="email" placeholder=" " required="" type="email"/>
+<label class="absolute text-outline duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-surface-white px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-9 font-body-lg text-body-lg" for="email">Email Address</label>
+</div>
+<!-- Password Field -->
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">lock</span>
+</div>
+<input class="block w-full pl-10 pr-10 py-3 border border-outline rounded-lg bg-transparent text-on-surface focus:ring-primary focus:border-primary font-body-lg text-body-lg transition-colors peer" id="password" placeholder=" " required="" type="password"/>
+<label class="absolute text-outline duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-surface-white px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-9 font-body-lg text-body-lg" for="password">Password</label>
+<button class="absolute inset-y-0 right-0 pr-3 flex items-center text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+<!-- Helper Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary focus:ring-primary border-outline rounded cursor-pointer" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block font-body-md text-body-md text-on-surface-variant cursor-pointer" for="remember-me">
+                                Remember me
+                            </label>
+</div>
+<div class="text-sm">
+<a class="font-label-lg text-label-lg text-primary-container hover:text-primary transition-colors font-medium" href="#">
+                                Forgot password?
+                            </a>
+</div>
+</div>
+<!-- Action Button -->
+<div>
+<button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm font-label-lg text-label-lg text-on-primary bg-primary-container hover:bg-primary hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200 ease-in-out uppercase tracking-wider" type="submit">
+                            Sign In
+                        </button>
+</div>
+</form>
+<!-- Divider -->
+<div class="mt-6">
+<div class="relative">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-surface-variant"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="px-2 bg-surface-white font-body-md text-body-md text-outline">OR</span>
+</div>
+</div>
+</div>
+<!-- Social Logins -->
+<div class="mt-6 grid grid-cols-1 gap-3">
+<button class="w-full flex justify-center items-center py-2.5 px-4 border border-outline rounded-lg shadow-sm bg-transparent hover:bg-surface-container-lowest font-label-lg text-label-lg text-on-surface hover:-translate-y-0.5 transition-all duration-200">
+<img alt="Google logo" class="h-5 w-5 mr-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFYfB1rWLUWj2dBBmjTspSgkDnPoGwMYjcoozudCV56oOu9zqznXRCgZ3aNnVqCqWsEhhTeBWVo6XG7KebCiiXS_4XM7u6zZQ59Dkexza3kasqrwylw-pjj1qP0GBDUaRW-fTWIBVjyVpng29w0SHWNeUozh9_S9Q7juARESD2eWGxHn2UagEmCs7tlpIX-Vh8Tuh_0AqIyPJzgFo6uxczArny1aEKpeWc3t_lkNiRQH5eFlQQyInPtDxTZfyKNCYkfx3f9GonleEZ"/>
+                        Sign in with Google
+                    </button>
+<button class="w-full flex justify-center items-center py-2.5 px-4 border border-outline rounded-lg shadow-sm bg-transparent hover:bg-surface-container-lowest font-label-lg text-label-lg text-on-surface hover:-translate-y-0.5 transition-all duration-200">
+<img alt="Facebook logo" class="h-5 w-5 mr-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUC0kuHBk5KCdPMGXSMf_mTu7aIcwHjRc5ngq8MQovGYyHYEIdBdK5H1j90Iydroa0EwpHSuq6JW9znvxwyPWsSOYqX_yyDIettTry-zGlvDkM7hdWjZWtpZgKRfu7881aLn60q3kqnflqNzveR2ywZ6VhkJEO_rRsOwY3elMhl6Cf5x9wa71jzis9hGQfVKm9PIyBCLop95Ji2ndLNoZjZ9OGlJs_-XoUnvIg6yWHjZoSSOT2JHiZcK9yD6kB5OjIL-EseyyS-4jE"/>
+                        Sign in with Facebook
+                    </button>
+</div>
+<!-- Footer -->
+<div class="mt-8 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Don't have an account? 
+                        <a class="font-label-lg text-label-lg text-primary-container hover:text-primary transition-colors font-medium" href="#">Sign up</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</body></html>

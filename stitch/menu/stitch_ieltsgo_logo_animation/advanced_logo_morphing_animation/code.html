@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: transparent; }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 900;
+      font-size: 84px;
+      letter-spacing: -2px;
+      position: relative;
+    }
+
+    .primary { color: #1CB0F6; }
+    .secondary { color: #F3C41B; }
+    .accent { color: #1A1A1A; }
+
+    .static-group { display: flex; align-items: center; }
+    .static-lets { position: relative; }
+    .static-go { position: relative; margin-left: 12px; }
+
+    /* Reserved space for IELTS */
+    .ielts-slot {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-left: 12px;
+      width: 250px;
+    }
+
+    .char { display: inline-block; position: relative; text-transform: lowercase; }
+    .uppercase { text-transform: uppercase; }
+
+    /* Animation Keyframes */
+    
+    /* Sequential Morphing & Uppercasing for l, e, t */
+    @keyframes morphL {
+      0%, 30% { transform: translate(-305px, 0); opacity: 0; color: #1CB0F6; text-transform: lowercase; }
+      31% { opacity: 1; }
+      50% { text-transform: uppercase; }
+      70%, 100% { transform: translate(0, 0); opacity: 1; color: #F3C41B; text-transform: uppercase; }
+    }
+    @keyframes morphE {
+      0%, 35% { transform: translate(-315px, 0); opacity: 0; color: #1CB0F6; text-transform: lowercase; }
+      36% { opacity: 1; }
+      55% { text-transform: uppercase; }
+      75%, 100% { transform: translate(0, 0); opacity: 1; color: #F3C41B; text-transform: uppercase; }
+    }
+    @keyframes morphT {
+      0%, 40% { transform: translate(-325px, 0); opacity: 0; color: #1CB0F6; text-transform: lowercase; }
+      41% { opacity: 1; }
+      60% { text-transform: uppercase; }
+      80%, 100% { transform: translate(0, 0); opacity: 1; color: #F3C41B; text-transform: uppercase; }
+    }
+
+    /* I dropping after E, L, T are in motion */
+    @keyframes dropI {
+      0%, 75% { transform: translateY(-100%); opacity: 0; }
+      85%, 100% { transform: translateY(0); opacity: 1; }
+    }
+
+    /* S rising last */
+    @keyframes riseS {
+      0%, 85% { transform: translateY(100%); opacity: 0; }
+      95%, 100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .char-i { animation: dropI 4s infinite; text-transform: uppercase; }
+    .char-l { animation: morphL 4s infinite; }
+    .char-e { animation: morphE 4s infinite; }
+    .char-t { animation: morphT 4s infinite; }
+    .char-s { animation: riseS 4s infinite; text-transform: uppercase; }
+
+  </style>
+</head>
+<body>
+  <div class="logo-container h-full">
+    <div class="static-group">
+      <span class="static-lets primary">lets</span>
+      <span class="static-go accent">go</span>
+    </div>
+    <div class="ielts-slot secondary">
+      <span class="char char-i">I</span>
+      <span class="char char-e">E</span>
+      <span class="char char-l">L</span>
+      <span class="char char-t">T</span>
+      <span class="char char-s">S</span>
+    </div>
+  </div>
+</body>
+</html>

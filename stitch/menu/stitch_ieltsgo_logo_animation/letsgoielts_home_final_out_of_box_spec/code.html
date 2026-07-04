@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>letsgoIELTS - Master Your Journey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Nunito+Sans:wght@600;700;800;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Nunito+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-highest": "#e1e3e4",
+                "on-tertiary-fixed": "#1c1b1b",
+                "primary-container": "#1cb0f6",
+                "on-background": "#191c1d",
+                "surface-dim": "#d9dadb",
+                "on-primary-fixed-variant": "#004c6e",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "on-secondary-fixed": "#241a00",
+                "surface-tint": "#006590",
+                "on-secondary": "#ffffff",
+                "error-container": "#ffdad6",
+                "inverse-on-surface": "#f0f1f2",
+                "inverse-primary": "#88ceff",
+                "background": "#f8f9fa",
+                "surface-container": "#edeeef",
+                "secondary-fixed-dim": "#f0c116",
+                "primary-fixed-dim": "#88ceff",
+                "on-primary": "#ffffff",
+                "on-primary-container": "#00405d",
+                "on-tertiary-container": "#3b3b3b",
+                "outline-variant": "#bdc8d2",
+                "outline": "#6e7881",
+                "on-surface": "#191c1d",
+                "on-secondary-container": "#705900",
+                "tertiary": "#5f5e5e",
+                "surface-variant": "#e1e3e4",
+                "tertiary-container": "#a7a5a5",
+                "surface-container-lowest": "#ffffff",
+                "secondary-container": "#ffcf2a",
+                "surface-white": "#FFFFFF",
+                "on-secondary-fixed-variant": "#574400",
+                "surface-bright": "#f8f9fa",
+                "on-tertiary-fixed-variant": "#474746",
+                "footer-background": "#F3C41B",
+                "on-surface-text": "#1A1A1A",
+                "primary": "#006590",
+                "on-error": "#ffffff",
+                "footer-on-surface": "#000000",
+                "on-error-container": "#93000a",
+                "surface-container-high": "#e7e8e9",
+                "secondary-fixed": "#ffe08a",
+                "secondary": "#745b00",
+                "surface": "#f8f9fa",
+                "tertiary-fixed": "#e5e2e1",
+                "surface-container-low": "#f3f4f5",
+                "primary-fixed": "#c8e6ff",
+                "on-primary-fixed": "#001e2e",
+                "index-number-gray": "#E5E5E5",
+                "error": "#ba1a1a",
+                "on-tertiary": "#ffffff",
+                "on-surface-variant": "#3e4850",
+                "inverse-surface": "#2e3132"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "container-max": "1200px",
+                "nav-height": "64px",
+                "section-padding": "80px",
+                "margin-mobile": "16px",
+                "margin-desktop": "auto",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "body-lg": ["Inter"],
+                "index-bg": ["Nunito Sans"],
+                "title-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "display-lg": ["Nunito Sans"],
+                "headline-lg": ["Nunito Sans"],
+                "headline-lg-mobile": ["Nunito Sans"],
+                "label-lg": ["Inter"],
+                "headline-md": ["Nunito Sans"]
+            },
+            "fontSize": {
+                "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                "index-bg": ["72px", {"lineHeight": "72px", "fontWeight": "800"}],
+                "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&display=swap');
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .social-icon-box {
+            border: 1px solid #000000;
+            border-radius: 8px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        .social-icon-box:hover {
+            transform: translateY(-2px);
+            background-color: rgba(0,0,0,0.05);
+        }
+        .elevated-card {
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .elevated-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.12);
+        }
+        .nav-item-hover {
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .nav-item-hover:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Animated Logo Styles */
+        .logo-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Space Grotesk', sans-serif;
+          font-weight: 900;
+          font-size: 84px;
+          letter-spacing: -2px;
+          position: relative;
+          white-space: nowrap;
+        }
+        
+        .primary { color: #1CB0F6; }
+        .secondary { color: #F3C41B; }
+        .accent { color: #1A1A1A; }
+        
+        .static-group { display: flex; align-items: center; }
+        .static-lets { position: relative; }
+        .static-go { position: relative; margin-left: 10px; }
+        
+        .ielts-slot {
+          display: flex;
+          align-items: center;
+          position: relative;
+          margin-left: 10px;
+          width: 260px; /* Reserved space for IELTS */
+        }
+        
+        /* Animation Keyframes */
+        
+        @keyframes morphL {
+          0%, 20% { transform: translate(-305px, 0); opacity: 0; color: #1CB0F6; text-transform: lowercase; }
+          21% { opacity: 1; }
+          50%, 100% { transform: translate(0, 0); opacity: 1; color: #F3C41B; text-transform: uppercase; }
+        }
+        @keyframes morphE {
+          0%, 25% { transform: translate(-300px, 0); opacity: 0; color: #1CB0F6; text-transform: lowercase; }
+          26% { opacity: 1; }
+          55%, 100% { transform: translate(0, 0); opacity: 1; color: #F3C41B; text-transform: uppercase; }
+        }
+        @keyframes morphT {
+          0%, 30% { transform: translate(-290px, 0); opacity: 0; color: #1CB0F6; text-transform: lowercase; }
+          31% { opacity: 1; }
+          60%, 100% { transform: translate(0, 0); opacity: 1; color: #F3C41B; text-transform: uppercase; }
+        }
+        
+        /* I dropping from top */
+        @keyframes dropI {
+          0%, 65% { transform: translateY(-100%); opacity: 0; }
+          80%, 100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* S rising from bottom */
+        @keyframes riseS {
+          0%, 65% { transform: translateY(100%); opacity: 0; }
+          80%, 100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        .char-i { animation: dropI 4s infinite cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .char-e { animation: morphE 4s infinite cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .char-l { animation: morphL 4s infinite cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .char-t { animation: morphT 4s infinite cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .char-s { animation: riseS 4s infinite cubic-bezier(0.34, 1.56, 0.64, 1); }
+        
+        .char { display: inline-block; }
+
+        .feature-watermark {
+            font-size: 80px;
+            font-weight: 900;
+            color: #DCAA00;
+            position: absolute;
+            top: -35px;
+            right: -15px;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full h-[64px] z-50 shadow-[0px_2px_4px_rgba(0,0,0,0.08)] bg-surface dark:bg-surface-dim">
+<nav class="flex justify-between items-center px-6 md:px-margin-desktop w-full max-w-container-max mx-auto h-nav-height">
+<div class="flex items-center gap-8">
+<a class="font-display-lg text-[32px] font-bold text-primary dark:text-primary-fixed-dim leading-none" href="#">letsgoIELTS</a>
+<div class="hidden md:flex gap-6">
+<a class="font-label-lg text-label-lg text-primary dark:text-primary-fixed-dim border-b-2 border-primary font-bold pb-1 transition-all active:scale-95 cursor-pointer" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-outline-variant font-medium nav-item-hover hover:text-primary cursor-pointer" href="#">Courses</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-outline-variant font-medium nav-item-hover hover:text-primary cursor-pointer" href="#">Library</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-outline-variant font-medium nav-item-hover hover:text-primary cursor-pointer" href="#">Events</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-outline-variant font-medium nav-item-hover hover:text-primary cursor-pointer" href="#">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2 border border-outline-variant">
+<span class="material-symbols-outlined text-outline mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-48" placeholder="Search resources..." type="text"/>
+</div>
+<button class="text-primary font-bold px-4 py-2 hover:translate-y-[-2px] transition-transform">Login</button>
+<button class="bg-primary text-on-primary font-bold px-6 py-2 rounded-full hover:translate-y-[-2px] transition-transform active:scale-95 shadow-sm">Signup</button>
+</div>
+</nav>
+</header>
+<main class="mt-[64px]">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex flex-col items-center justify-center px-margin-mobile md:px-0 py-section-padding overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10">
+</div>
+<div class="relative z-10 text-center max-w-4xl mx-auto w-full">
+<div class="mb-12 md:mb-16 flex justify-center w-full max-w-2xl mx-auto px-4">
+<div class="logo-container scale-50 sm:scale-75 md:scale-100 origin-center py-8">
+<div class="static-group">
+<span class="static-lets primary">lets</span>
+<span class="static-go accent">go</span>
+</div>
+<div class="ielts-slot secondary">
+<span class="char char-i">I</span>
+<span class="char char-e">E</span>
+<span class="char char-l">L</span>
+<span class="char char-t">T</span>
+<span class="char char-s">S</span>
+</div>
+</div>
+</div>
+<div class="elevated-card bg-surface-white/80 backdrop-blur-md p-8 md:p-12 rounded-xl max-w-3xl mx-auto border border-surface-container-highest shadow-lg">
+<p class="font-headline-md text-headline-md italic text-primary leading-relaxed">
+                        "Mastering IELTS is not a destination, it's a journey. Let's go together!"
+                    </p>
+<div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold text-lg hover:translate-y-[-2px] transition-all active:scale-95 uppercase">START LEARNING FREE</button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-bold text-lg hover:translate-y-[-2px] transition-all active:scale-95 uppercase">EXPLORE COURSES</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Section -->
+<section class="bg-surface-container-low py-section-padding">
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Feature Card 1 -->
+<div class="elevated-card relative bg-surface-white p-8 rounded-xl h-64 flex flex-col justify-end overflow-visible group">
+<span class="feature-watermark group-hover:text-primary-container transition-colors">01</span>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 block">assignment</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Free IELTS Test</h3>
+</div>
+</div>
+<!-- Feature Card 2 -->
+<div class="elevated-card relative bg-surface-white p-8 rounded-xl h-64 flex flex-col justify-end overflow-visible group">
+<span class="feature-watermark group-hover:text-primary-container transition-colors">02</span>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 block">psychology</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Lộ trình học IELTS tối ưu bằng AI</h3>
+</div>
+</div>
+<!-- Feature Card 3 -->
+<div class="elevated-card relative bg-surface-white p-8 rounded-xl h-64 flex flex-col justify-end overflow-visible group">
+<span class="feature-watermark group-hover:text-primary-container transition-colors">03</span>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 block">record_voice_over</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Luyện nói &amp; sửa lỗi trực tiếp với AI</h3>
+</div>
+</div>
+<!-- Feature Card 4 -->
+<div class="elevated-card relative bg-surface-white p-8 rounded-xl h-64 flex flex-col justify-end overflow-visible group">
+<span class="feature-watermark group-hover:text-primary-container transition-colors">04</span>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 block">school</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Phòng thi thử ảo chấm điểm ngay</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-section-padding bg-surface-white">
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<div class="relative rounded-2xl overflow-hidden shadow-xl aspect-video">
+<img class="w-full h-full object-cover" data-alt="A modern IELTS classroom setting with diverse students using tablets and laptops in a bright, minimalist educational environment. The lighting is soft and natural, with a clean aesthetic featuring primary blue accents from the letsgoIELTS brand. The mood is focused, collaborative, and optimistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzrLGB_6TyOlV7UUVahdaz2bF08xupv9wIWUKi2JFfiLxpzaCAYvq_L2HLsIYTX1N3XT7KOuHyvF8pTo-xfb0Xd-qnrMPBA_a3C-Zs3opNOxGOpJ51a2UdGg-5hnpBJ6NmaSbMluhJrLyJ6NLOCIscHj1UZ7rep_NowRhKDoUJDyGPBVcrY8C9XCS5vHtEc9O4TPbXYLAuHZDEbpGbHNEsEqKRnpGuSiLWsBI_4Fx2bsch7gqljFmyYtkgzr4sxhlmdFfzMBRub11X"/>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<h2 class="font-headline-lg text-headline-lg mb-6">Why students trust letsgoIELTS</h2>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-primary-container p-2 rounded-lg">
+<span class="material-symbols-outlined text-on-primary-container">verified</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg mb-1">98% Success Rate</h4>
+<p class="font-body-md text-on-surface-variant">Our students consistently achieve 7.0+ overall scores within 3 months of focused study.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-secondary-container p-2 rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container">auto_fix_high</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg mb-1">AI-Powered Correction</h4>
+<p class="font-body-md text-on-surface-variant">Get instant, detailed feedback on your writing and speaking that mimics official examiner criteria.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-tertiary-container p-2 rounded-lg">
+<span class="material-symbols-outlined text-on-tertiary-container">support_agent</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg mb-1">Expert Mentorship</h4>
+<p class="font-body-md text-on-surface-variant">Access to certified IELTS examiners and 8.5+ tutors for weekly Q&amp;A sessions.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full min-h-[300px] bg-footer-background text-footer-on-surface">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-6 md:px-margin-desktop py-section-padding max-w-container-max mx-auto">
+<!-- Brand Info -->
+<div class="flex flex-col gap-6">
+<div>
+<h2 class="font-display-lg text-[40px] font-black leading-tight">letsgoIELTS</h2>
+<p class="font-headline-md text-headline-md opacity-90 mt-[-8px]">the IELTS workshop</p>
+</div>
+<p class="font-body-md opacity-80 max-w-xs">Empowering the next generation of global citizens with language mastery and academic confidence.</p>
+<div class="flex gap-4">
+<a aria-label="Facebook" class="social-icon-box border-black" href="#">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a aria-label="Instagram" class="social-icon-box border-black" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a aria-label="YouTube" class="social-icon-box border-black" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+</a>
+<a aria-label="Phone" class="social-icon-box border-black" href="#">
+<span class="material-symbols-outlined">call</span>
+</a>
+</div>
+</div>
+<!-- About Section -->
+<div class="flex flex-col gap-4">
+<h3 class="font-headline-lg text-headline-lg mb-4 uppercase">ABOUT US</h3>
+<nav class="flex flex-col gap-3">
+<a class="text-footer-on-surface opacity-80 hover:opacity-100 transition-opacity font-body-md" href="#">Privacy Policy</a>
+<a class="text-footer-on-surface opacity-80 hover:opacity-100 transition-opacity font-body-md" href="#">Terms of Service</a>
+<a class="text-footer-on-surface opacity-80 hover:opacity-100 transition-opacity font-body-md" href="#">Cookie Policy</a>
+<a class="text-footer-on-surface opacity-80 hover:opacity-100 transition-opacity font-body-md" href="#">Careers</a>
+</nav>
+</div>
+<!-- Contact Section -->
+<div class="flex flex-col gap-4">
+<h3 class="font-headline-lg text-headline-lg mb-4 uppercase">Contact</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-body-md">hello@letsgoielts.vn</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">location_on</span>
+<span class="font-body-md">123 Learning Way, Education District</span>
+</div>
+</div>
+<div class="mt-8">
+<p class="font-body-md font-bold mb-2">Subscribe to our newsletter</p>
+<div class="flex">
+<input class="bg-white/20 border border-black/20 rounded-l-lg px-4 py-2 w-full focus:outline-none focus:bg-white/30 text-black placeholder:text-black/60" placeholder="Email address" type="email"/>
+<button class="bg-black text-white px-4 py-2 rounded-r-lg font-bold">JOIN</button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full border-t border-black/10 py-6 text-center">
+<p class="font-body-md opacity-60">© 2024 letsgoIELTS - the IELTS workshop</p>
+</div>
+</footer>
+<script>
+        // Smooth scroll and micro-interactions
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple visibility observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.elevated-card').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

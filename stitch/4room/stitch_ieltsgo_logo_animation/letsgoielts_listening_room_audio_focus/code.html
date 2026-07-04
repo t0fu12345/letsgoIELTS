@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>letsgoIELTS - Listening Room</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Nunito+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#6e7881",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-tertiary-container": "#3b3b3b",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "background": "#f8f9fa",
+                      "outline-variant": "#bdc8d2",
+                      "surface-container-highest": "#e1e3e4",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#2e3132",
+                      "footer-background": "#F3C41B",
+                      "primary": "#006590",
+                      "secondary-fixed": "#ffe08a",
+                      "primary-fixed": "#c8e6ff",
+                      "surface-dim": "#d9dadb",
+                      "tertiary-container": "#a7a5a5",
+                      "surface-container-low": "#f3f4f5",
+                      "on-surface-text": "#1A1A1A",
+                      "primary-container": "#1cb0f6",
+                      "surface-container-high": "#e7e8e9",
+                      "on-primary-fixed": "#001e2e",
+                      "surface": "#f8f9fa",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "on-surface-variant": "#3e4850",
+                      "secondary-container": "#ffcf2a",
+                      "inverse-primary": "#88ceff",
+                      "secondary": "#745b00",
+                      "surface-tint": "#006590",
+                      "on-primary-container": "#00405d",
+                      "tertiary": "#5f5e5e",
+                      "on-secondary-fixed": "#241a00",
+                      "surface-white": "#FFFFFF",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface": "#191c1d",
+                      "tertiary-fixed": "#e5e2e1",
+                      "surface-container": "#edeeef",
+                      "on-primary-fixed-variant": "#004c6e",
+                      "footer-on-surface": "#000000",
+                      "error": "#ba1a1a",
+                      "primary-fixed-dim": "#88ceff",
+                      "on-secondary-container": "#705900",
+                      "surface-bright": "#f8f9fa",
+                      "on-error-container": "#93000a",
+                      "on-background": "#191c1d",
+                      "secondary-fixed-dim": "#f0c116",
+                      "inverse-on-surface": "#f0f1f2",
+                      "on-secondary-fixed-variant": "#574400",
+                      "surface-variant": "#e1e3e4",
+                      "index-number-gray": "#E5E5E5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "nav-height": "64px",
+                      "margin-desktop": "auto",
+                      "section-padding": "80px",
+                      "gutter": "24px",
+                      "container-max": "1200px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Nunito Sans"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Nunito Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "Nunito Sans"
+                      ],
+                      "index-bg": [
+                              "Nunito Sans"
+                      ],
+                      "display-lg": [
+                              "Nunito Sans"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "index-bg": [
+                              "72px",
+                              {
+                                      "lineHeight": "72px",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "display-lg": [
+                              "57px",
+                              {
+                                      "lineHeight": "64px",
+                                      "letterSpacing": "-0.25px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.25px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-lg": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface font-body-lg min-h-screen">
+<!-- Top Navigation (Shell suppressed/modified for transactional task) -->
+<header class="fixed top-0 left-0 w-full h-nav-height z-50 flex justify-between items-center px-4 md:px-margin-desktop bg-surface dark:bg-surface-dim shadow-sm elevation-1">
+<div class="flex items-center gap-4 max-w-[800px] w-full mx-auto justify-between">
+<button class="p-2 rounded-full hover:bg-surface-container-high transition-colors flex items-center justify-center text-primary dark:text-primary-fixed">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="text-title-lg font-headline-lg text-primary dark:text-primary-fixed-dim">
+                letsgoIELTS
+            </div>
+<div class="flex items-center gap-4">
+<span class="text-label-lg font-label-lg px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant">
+                    Target: 7.0
+                </span>
+<button class="bg-primary text-on-primary text-label-lg font-label-lg px-6 py-2 rounded-full uppercase hover:-translate-y-0.5 transition-transform duration-200 shadow-sm flex items-center gap-2">
+                    SUBMIT TO AI
+                 </button>
+</div>
+</div>
+</header>
+<main class="pt-[calc(64px+32px)] pb-section-padding px-4 md:px-0">
+<!-- Focused Centered Layout -->
+<div class="max-w-[800px] w-full mx-auto relative flex flex-col gap-8">
+<!-- Sticky Audio Player (Elevated Card) -->
+<div class="sticky top-[80px] z-40 bg-surface-container-lowest rounded-xl shadow-[0_2px_4px_rgba(0,0,0,0.08)] border border-surface-variant p-4 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:-translate-y-0.5 transition-transform shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div>
+<div class="font-title-lg text-title-lg text-on-surface">Practice Test 4 - Section 1</div>
+<div class="text-body-md font-body-md text-on-surface-variant">00:00 / 06:45</div>
+</div>
+</div>
+<div class="relative">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded border border-outline-variant text-label-lg font-label-lg text-on-surface-variant hover:bg-surface-container-low transition-colors">
+                             1.0x <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden cursor-pointer">
+<div class="h-full bg-[#1CB0F6] w-[20%] relative">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-surface-container-lowest rounded-full shadow-sm border border-outline-variant hidden"></div>
+</div>
+</div>
+</div>
+<!-- Question Area -->
+<div class="flex flex-col gap-8">
+<!-- Section 1 Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 md:p-8 relative overflow-hidden">
+<!-- Ghost Index -->
+<div class="absolute bottom-4 right-4 text-index-bg font-index-bg text-index-number-gray opacity-30 select-none z-0">
+                        01
+                    </div>
+<div class="relative z-10">
+<h2 class="text-headline-md font-headline-md text-primary mb-6">Questions 1-10</h2>
+<p class="text-body-lg font-body-lg mb-6 italic text-on-surface-variant">Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.</p>
+<div class="bg-surface-container-low p-6 rounded-lg border border-surface-variant">
+<h3 class="text-title-lg font-title-lg mb-4 text-center">Flanders Conference Centre</h3>
+<div class="grid gap-6">
+<div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+<span class="font-label-lg text-label-lg w-32 shrink-0">Customer:</span>
+<span class="text-body-lg font-body-lg">Andrew <span class="inline-flex items-center gap-2">
+<span class="text-label-lg font-label-lg text-primary w-6 text-right">1</span>
+<input class="border-b-2 border-x-0 border-t-0 border-outline bg-transparent focus:ring-0 focus:border-primary px-2 py-1 w-48 text-body-lg font-body-lg text-on-surface" tabindex="1" type="text"/>
+</span></span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+<span class="font-label-lg text-label-lg w-32 shrink-0">Company:</span>
+<span class="text-body-lg font-body-lg">Herald <span class="inline-flex items-center gap-2">
+<span class="text-label-lg font-label-lg text-primary w-6 text-right">2</span>
+<input class="border-b-2 border-x-0 border-t-0 border-outline bg-transparent focus:ring-0 focus:border-primary px-2 py-1 w-48 text-body-lg font-body-lg text-on-surface" tabindex="2" type="text"/>
+</span></span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+<span class="font-label-lg text-label-lg w-32 shrink-0">Address:</span>
+<span class="text-body-lg font-body-lg">Room 5, 23 <span class="inline-flex items-center gap-2">
+<span class="text-label-lg font-label-lg text-primary w-6 text-right">3</span>
+<input class="border-b-2 border-x-0 border-t-0 border-outline bg-transparent focus:ring-0 focus:border-primary px-2 py-1 w-48 text-body-lg font-body-lg text-on-surface" tabindex="3" type="text"/>
+</span> Road, London</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Transcript Toggle (Post-Submission preview) -->
+<div class="mt-4 flex justify-center">
+<button class="flex items-center gap-2 text-primary font-label-lg text-label-lg hover:underline p-2">
+<span class="material-symbols-outlined">visibility</span>
+                     View Transcript
+                 </button>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>letsgoIELTS - Reading Room</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Merriweather:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline": "#6e7881",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-tertiary-container": "#3b3b3b",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "background": "#f8f9fa",
+                        "outline-variant": "#bdc8d2",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "footer-background": "#F3C41B",
+                        "primary": "#006590",
+                        "secondary-fixed": "#ffe08a",
+                        "primary-fixed": "#c8e6ff",
+                        "surface-dim": "#d9dadb",
+                        "tertiary-container": "#a7a5a5",
+                        "surface-container-low": "#f3f4f5",
+                        "on-surface-text": "#1A1A1A",
+                        "primary-container": "#1cb0f6",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-fixed": "#001e2e",
+                        "surface": "#f8f9fa",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-surface-variant": "#3e4850",
+                        "secondary-container": "#ffcf2a",
+                        "inverse-primary": "#88ceff",
+                        "secondary": "#745b00",
+                        "surface-tint": "#006590",
+                        "on-primary-container": "#00405d",
+                        "tertiary": "#5f5e5e",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-white": "#FFFFFF",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-container": "#edeeef",
+                        "on-primary-fixed-variant": "#004c6e",
+                        "footer-on-surface": "#000000",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#88ceff",
+                        "on-secondary-container": "#705900",
+                        "surface-bright": "#f8f9fa",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191c1d",
+                        "secondary-fixed-dim": "#f0c116",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-secondary-fixed-variant": "#574400",
+                        "surface-variant": "#e1e3e4",
+                        "index-number-gray": "#E5E5E5",
+                        "paper": "#FAF9F6",
+                        "highlight-blue": "#E1F5FE",
+                        "highlight-yellow": "#FFF59D"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "nav-height": "64px",
+                        "margin-desktop": "auto",
+                        "section-padding": "80px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "margin-mobile": "16px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Nunito Sans"],
+                        "label-lg": ["Inter"],
+                        "headline-md": ["Nunito Sans"],
+                        "headline-lg-mobile": ["Nunito Sans"],
+                        "index-bg": ["Nunito Sans"],
+                        "display-lg": ["Nunito Sans"],
+                        "body-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "passage": ["Merriweather", "serif"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "index-bg": ["72px", { "lineHeight": "72px", "fontWeight": "800" }],
+                        "display-lg": ["57px", { "lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .split-container {
+            display: flex;
+            height: calc(100vh - 64px);
+            overflow: hidden;
+        }
+        .resizer {
+            width: 8px;
+            background-color: theme('colors.surface-variant');
+            cursor: col-resize;
+            z-index: 10;
+            transition: background-color 0.2s;
+        }
+        .resizer:hover, .resizer:active {
+            background-color: theme('colors.outline');
+        }
+        .passage-content {
+            font-family: 'Merriweather', serif;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .passage-content p {
+            margin-bottom: 1.5rem;
+        }
+        /* Custom Scrollbar for panels */
+        .panel-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .panel-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .panel-scroll::-webkit-scrollbar-thumb {
+            background-color: theme('colors.outline-variant');
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface h-screen overflow-hidden flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim shadow-sm elevation-1 fixed top-0 left-0 w-full h-nav-height z-50 flex justify-between items-center px-4 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-highest rounded-full transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">arrow_back</span>
+</button>
+<h1 class="text-title-lg font-headline-lg text-primary dark:text-primary-fixed-dim">Cambridge 18 - Reading Test 1</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-error font-bold text-headline-md font-headline-md">
+<span class="material-symbols-outlined">timer</span>
+<span>60:00</span>
+</div>
+<div class="hidden md:flex items-center gap-4">
+<span class="text-label-lg font-label-lg text-on-surface-variant bg-surface-container-high px-3 py-1 rounded-full">Target: 7.0</span>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-lg text-label-lg font-bold hover:translate-y-[-2px] transition-transform duration-200 uppercase shadow-sm">
+                    SUBMIT TO AI
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Split Workspace -->
+<main class="split-container mt-nav-height w-full max-w-container-max mx-auto">
+<!-- Left Panel: Passage -->
+<div class="w-1/2 h-full bg-paper panel-scroll overflow-y-auto p-6 md:p-10 relative" id="left-panel">
+<h2 class="text-headline-md font-headline-md text-on-surface mb-6">Urban Farming: A New Era of Agriculture</h2>
+<div class="passage-content text-on-surface-variant">
+<p><strong>A.</strong> The concept of indoor farming is not new, since hothouse production of tomatoes and other produce has been in vogue for some time. What is new is the urgent need to scale up this technology to accommodate another three billion people. Many believe an entirely new approach to indoor farming is required, employing cutting-edge technologies. One such proposal is for the 'Vertical Farm'. The concept is of multi-storey buildings in which food crops are grown in environmentally controlled conditions. Situated in the heart of urban centres, they would drastically reduce the amount of transportation required to bring food to consumers.</p>
+<p><strong>B.</strong> Proponents claim that vertical farms offer many potential advantages for the environment and society. For instance, crops would be produced all year round, as they would be kept in artificially controlled, optimum growing conditions. There would be no weather-related crop failures due to droughts, floods or pests. All the food could be grown organically, eliminating the need for herbicides, pesticides and fertilisers. The system would also greatly reduce the incidence of many infectious diseases that are acquired at the agricultural interface.</p>
+<p><strong>C.</strong> However, a major drawback of vertical farming is the cost of the artificial lighting required. In a multi-storey building, natural sunlight cannot reach all the plants, necessitating the use of energy-intensive grow lights. While LED technology is improving efficiency, the sheer scale of energy required for a large vertical farm remains a significant hurdle. Furthermore, the initial capital investment to construct these high-tech facilities is immense, making it difficult for such projects to be economically viable in the short term without substantial subsidies.</p>
+</div>
+<!-- Floating Toolbar (Hidden by default, shown on text selection) -->
+<div class="hidden absolute bg-surface-white shadow-md elevation-2 rounded-lg p-2 flex gap-2 border border-outline-variant items-center z-50" id="floating-toolbar">
+<button class="w-6 h-6 rounded-full bg-highlight-yellow hover:scale-110 transition-transform" title="Highlight Yellow"></button>
+<button class="w-6 h-6 rounded-full bg-[#B2DFDB] hover:scale-110 transition-transform" title="Highlight Green"></button>
+<button class="w-6 h-6 rounded-full bg-[#F8BBD0] hover:scale-110 transition-transform" title="Highlight Pink"></button>
+<div class="w-px h-6 bg-outline-variant mx-1"></div>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center p-1" title="Save to Notebook">
+<span class="material-symbols-outlined text-[20px]">book</span>
+</button>
+</div>
+</div>
+<!-- Draggable Divider -->
+<div class="resizer flex flex-col justify-center items-center" id="drag-divider">
+<div class="w-1 h-8 bg-outline rounded-full opacity-50"></div>
+</div>
+<!-- Right Panel: Questions -->
+<div class="w-1/2 h-full bg-surface-white panel-scroll overflow-y-auto p-6 md:p-10" id="right-panel">
+<h3 class="text-title-lg font-title-lg text-on-surface mb-6">Questions 1-5</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4 italic">Do the following statements agree with the information given in the Reading Passage? In boxes 1-5, choose TRUE, FALSE, or NOT GIVEN.</p>
+<!-- True/False/Not Given Card -->
+<div class="bg-surface-white border border-outline-variant rounded-xl p-6 shadow-sm elevation-1 mb-8">
+<!-- Question 1 -->
+<div class="mb-6 pb-6 border-b border-surface-variant last:border-b-0 last:pb-0 last:mb-0">
+<p class="text-body-lg font-body-lg text-on-surface mb-4"><strong>1.</strong> Vertical farming requires less transportation to get food to consumers compared to traditional farming.</p>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-highlight-blue has-[:checked]:border-primary border border-transparent">
+<input class="text-primary focus:ring-primary w-5 h-5" name="q1" type="radio"/>
+<span class="text-body-md font-body-md">TRUE</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-highlight-blue has-[:checked]:border-primary border border-transparent">
+<input class="text-primary focus:ring-primary w-5 h-5" name="q1" type="radio"/>
+<span class="text-body-md font-body-md">FALSE</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-highlight-blue has-[:checked]:border-primary border border-transparent">
+<input class="text-primary focus:ring-primary w-5 h-5" name="q1" type="radio"/>
+<span class="text-body-md font-body-md">NOT GIVEN</span>
+</label>
+</div>
+</div>
+<!-- Question 2 -->
+<div class="mb-6 pb-6 border-b border-surface-variant last:border-b-0 last:pb-0 last:mb-0">
+<p class="text-body-lg font-body-lg text-on-surface mb-4"><strong>2.</strong> Vertical farms rely completely on natural sunlight for plant growth.</p>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-highlight-blue has-[:checked]:border-primary border border-transparent">
+<input class="text-primary focus:ring-primary w-5 h-5" name="q2" type="radio"/>
+<span class="text-body-md font-body-md">TRUE</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-highlight-blue has-[:checked]:border-primary border border-transparent">
+<input class="text-primary focus:ring-primary w-5 h-5" name="q2" type="radio"/>
+<span class="text-body-md font-body-md">FALSE</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-highlight-blue has-[:checked]:border-primary border border-transparent">
+<input class="text-primary focus:ring-primary w-5 h-5" name="q2" type="radio"/>
+<span class="text-body-md font-body-md">NOT GIVEN</span>
+</label>
+</div>
+</div>
+</div>
+<h3 class="text-title-lg font-title-lg text-on-surface mb-6">Questions 6-8</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4 italic">Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.</p>
+<!-- Fill in the blanks Card -->
+<div class="bg-surface-white border border-outline-variant rounded-xl p-6 shadow-sm elevation-1 mb-8">
+<p class="text-body-lg font-body-lg text-on-surface leading-loose">
+                    One of the main benefits of vertical farming is that it eliminates weather-related 
+                    <strong>6.</strong> <input class="inline-block w-32 border-b-2 border-outline focus:border-primary border-t-0 border-x-0 bg-transparent px-2 py-1 text-center font-bold text-primary focus:ring-0 focus:outline-none transition-colors" placeholder="..." type="text"/> 
+                    and allows crops to be grown organically without the need for 
+                    <strong>7.</strong> <input class="inline-block w-32 border-b-2 border-outline focus:border-primary border-t-0 border-x-0 bg-transparent px-2 py-1 text-center font-bold text-primary focus:ring-0 focus:outline-none transition-colors" placeholder="..." type="text"/>.
+                    However, the energy intensive nature of artificial 
+                    <strong>8.</strong> <input class="inline-block w-32 border-b-2 border-outline focus:border-primary border-t-0 border-x-0 bg-transparent px-2 py-1 text-center font-bold text-primary focus:ring-0 focus:outline-none transition-colors" placeholder="..." type="text"/>
+                    remains a significant challenge.
+                </p>
+</div>
+</div>
+</main>
+<script>
+        // Basic resizer logic
+        const resizer = document.getElementById('drag-divider');
+        const leftPanel = document.getElementById('left-panel');
+        const rightPanel = document.getElementById('right-panel');
+        let isResizing = false;
+
+        resizer.addEventListener('mousedown', (e) => {
+            isResizing = true;
+            document.body.style.cursor = 'col-resize';
+            // Prevent text selection while resizing
+            document.body.style.userSelect = 'none';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isResizing) return;
+            const containerWidth = document.body.clientWidth;
+            // Limit resizing to reasonable widths (20% to 80%)
+            if (e.clientX > containerWidth * 0.2 && e.clientX < containerWidth * 0.8) {
+                const leftWidth = (e.clientX / containerWidth) * 100;
+                leftPanel.style.width = `${leftWidth}%`;
+                rightPanel.style.width = `${100 - leftWidth}%`;
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (isResizing) {
+                isResizing = false;
+                document.body.style.cursor = 'default';
+                document.body.style.userSelect = 'auto';
+            }
+        });
+    </script>
+</body></html>

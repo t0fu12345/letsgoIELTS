@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>letsgoIELTS Speaking Room</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#6e7881",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "on-tertiary-container": "#3b3b3b",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "background": "#f8f9fa",
+                    "outline-variant": "#bdc8d2",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2e3132",
+                    "footer-background": "#F3C41B",
+                    "primary": "#006590",
+                    "secondary-fixed": "#ffe08a",
+                    "primary-fixed": "#c8e6ff",
+                    "surface-dim": "#d9dadb",
+                    "tertiary-container": "#a7a5a5",
+                    "surface-container-low": "#f3f4f5",
+                    "on-surface-text": "#1A1A1A",
+                    "primary-container": "#1cb0f6",
+                    "surface-container-high": "#e7e8e9",
+                    "on-primary-fixed": "#001e2e",
+                    "surface": "#f8f9fa",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "on-surface-variant": "#3e4850",
+                    "secondary-container": "#ffcf2a",
+                    "inverse-primary": "#88ceff",
+                    "secondary": "#745b00",
+                    "surface-tint": "#006590",
+                    "on-primary-container": "#00405d",
+                    "tertiary": "#5f5e5e",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-white": "#FFFFFF",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#191c1d",
+                    "tertiary-fixed": "#e5e2e1",
+                    "surface-container": "#edeeef",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "footer-on-surface": "#000000",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#88ceff",
+                    "on-secondary-container": "#705900",
+                    "surface-bright": "#f8f9fa",
+                    "on-error-container": "#93000a",
+                    "on-background": "#191c1d",
+                    "secondary-fixed-dim": "#f0c116",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-secondary-fixed-variant": "#574400",
+                    "surface-variant": "#e1e3e4",
+                    "index-number-gray": "#E5E5E5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "nav-height": "64px",
+                    "margin-desktop": "auto",
+                    "section-padding": "80px",
+                    "gutter": "24px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg": [
+                            "Nunito Sans"
+                    ],
+                    "label-lg": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Nunito Sans"
+                    ],
+                    "headline-lg-mobile": [
+                            "Nunito Sans"
+                    ],
+                    "index-bg": [
+                            "Nunito Sans"
+                    ],
+                    "display-lg": [
+                            "Nunito Sans"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "title-lg": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-lg": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.1px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-md": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "index-bg": [
+                            "72px",
+                            {
+                                    "lineHeight": "72px",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "display-lg": [
+                            "57px",
+                            {
+                                    "lineHeight": "64px",
+                                    "letterSpacing": "-0.25px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.25px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "title-lg": [
+                            "22px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-lg": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "letterSpacing": "0.5px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .waveform-container {
+            width: 240px;
+            height: 240px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pulse-ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid #1CB0F6;
+            animation: pulse 2s ease-out infinite;
+            opacity: 0;
+        }
+
+        .pulse-ring:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .pulse-ring:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        
+        .core-circle {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #006590, #1cb0f6);
+            border-radius: 50%;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 4px 20px rgba(28, 176, 246, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .record-fab {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: white;
+            border: 4px solid #ba1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        
+        .record-fab.recording {
+            background-color: #ba1a1a;
+            border-radius: 24px;
+            transform: scale(0.9);
+        }
+        
+        .record-fab .material-symbols-outlined {
+            font-size: 36px;
+            color: #ba1a1a;
+            transition: color 0.3s ease;
+        }
+        
+        .record-fab.recording .material-symbols-outlined {
+            color: white;
+            content: "stop"; /* Visually changing icon via JS usually, just styling here */
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col overflow-hidden">
+<!-- Top App Bar - Minimal for focused task -->
+<header class="w-full h-nav-height flex justify-between items-center px-4 md:px-margin-desktop max-w-container-max mx-auto z-50">
+<button aria-label="Go back" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-variant transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<div class="text-title-lg font-title-lg text-primary">
+            Speaking Room
+        </div>
+<div class="w-12 h-12"></div> <!-- Spacer for centering -->
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-margin-mobile relative">
+<!-- Interactive AI Interviewer Visual -->
+<div class="flex-grow flex flex-col items-center justify-center w-full max-w-2xl gap-8">
+<div class="waveform-container mb-8">
+<div class="pulse-ring"></div>
+<div class="pulse-ring"></div>
+<div class="pulse-ring"></div>
+<div class="core-circle">
+<span class="material-symbols-outlined text-white text-[48px]" style="font-variation-settings: 'FILL' 1;">graphic_eq</span>
+</div>
+</div>
+<!-- Subtitle Panel -->
+<div class="w-full text-center min-h-[100px] flex items-center justify-center px-4">
+<h2 class="text-headline-md font-headline-md text-on-surface-text max-w-xl" id="ai-subtitle">
+                    "Part 1: Let's talk about your hometown. Where is your hometown located?"
+                </h2>
+</div>
+<!-- Contextual Status -->
+<div class="text-label-lg font-label-lg text-primary-container h-6 flex items-center space-x-2 opacity-80" id="status-indicator">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>AI is listening...</span>
+</div>
+</div>
+<!-- Recording Controls (Bottom fixed relative to viewport) -->
+<div class="pb-12 pt-8 w-full flex flex-col items-center justify-center">
+<button aria-label="Start Recording" class="record-fab" id="recordButton">
+<span class="material-symbols-outlined" id="recordIcon" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+<p class="text-label-lg font-label-lg text-on-surface-variant mt-4">Tap to record</p>
+</div>
+</main>
+<script>
+        const recordBtn = document.getElementById('recordButton');
+        const recordIcon = document.getElementById('recordIcon');
+        const aiSubtitle = document.getElementById('ai-subtitle');
+        const statusIndicator = document.getElementById('status-indicator');
+        let isRecording = false;
+
+        recordBtn.addEventListener('click', () => {
+            isRecording = !isRecording;
+            
+            if (isRecording) {
+                recordBtn.classList.add('recording');
+                recordIcon.textContent = 'stop';
+                aiSubtitle.style.opacity = '0.5';
+                statusIndicator.innerHTML = '<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span><span class="text-error">Recording...</span>';
+                
+                // Hide pulsing rings during recording
+                document.querySelectorAll('.pulse-ring').forEach(el => el.style.display = 'none');
+                
+            } else {
+                recordBtn.classList.remove('recording');
+                recordIcon.textContent = 'mic';
+                aiSubtitle.style.opacity = '1';
+                
+                // Show processing state
+                statusIndicator.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">sync</span><span>AI is analyzing your pronunciation...</span>';
+                
+                // Restore rings
+                document.querySelectorAll('.pulse-ring').forEach(el => el.style.display = 'block');
+                
+                // Simulate processing finish
+                setTimeout(() => {
+                    statusIndicator.innerHTML = '<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span>AI is listening...</span>';
+                    aiSubtitle.textContent = "What do you like most about living there?";
+                }, 3000);
+            }
+        });
+    </script>
+</body></html>

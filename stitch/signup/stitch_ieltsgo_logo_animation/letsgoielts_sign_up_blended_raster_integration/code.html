@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>letsgoIELTS Sign Up - Blended Raster Integration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Nunito+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary": "#5f5e5e",
+                        "surface-bright": "#f8f9fa",
+                        "on-surface-text": "#1A1A1A",
+                        "on-tertiary-container": "#3b3b3b",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "primary-fixed": "#c8e6ff",
+                        "surface": "#f8f9fa",
+                        "outline-variant": "#bdc8d2",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#705900",
+                        "inverse-surface": "#2e3132",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-fixed-variant": "#574400",
+                        "error-container": "#ffdad6",
+                        "background": "#f8f9fa",
+                        "outline": "#6e7881",
+                        "on-primary-container": "#00405d",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-white": "#FFFFFF",
+                        "inverse-primary": "#88ceff",
+                        "on-surface": "#191c1d",
+                        "on-background": "#191c1d",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-high": "#e7e8e9",
+                        "footer-background": "#F3C41B",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-container": "#edeeef",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "secondary-container": "#ffcf2a",
+                        "surface-tint": "#006590",
+                        "on-secondary-fixed": "#241a00",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#88ceff",
+                        "tertiary-fixed": "#e5e2e1",
+                        "primary-container": "#1cb0f6",
+                        "tertiary-container": "#a7a5a5",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#f0c116",
+                        "on-primary-fixed-variant": "#004c6e",
+                        "secondary": "#745b00",
+                        "on-error": "#ffffff",
+                        "footer-on-surface": "#000000",
+                        "on-primary-fixed": "#001e2e",
+                        "primary": "#006590",
+                        "secondary-fixed": "#ffe08a",
+                        "index-number-gray": "#E5E5E5",
+                        "surface-dim": "#d9dadb",
+                        "on-surface-variant": "#3e4850",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "margin-desktop": "auto",
+                        "margin-mobile": "16px",
+                        "section-padding": "80px",
+                        "nav-height": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "title-lg": ["Inter"],
+                        "headline-md": ["Nunito Sans"],
+                        "headline-lg-mobile": ["Nunito Sans"],
+                        "body-lg": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Nunito Sans"],
+                        "index-bg": ["Nunito Sans"],
+                        "headline-lg": ["Nunito Sans"]
+                    },
+                    "fontSize": {
+                        "title-lg": ["22px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "display-lg": ["57px", { "lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700" }],
+                        "index-bg": ["72px", { "lineHeight": "72px", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen flex flex-col md:flex-row overflow-x-hidden">
+<!-- Left Column (Branding) -->
+<div class="hidden md:flex flex-col justify-between bg-[#F3C41B] w-1/2 p-10 lg:p-16 relative overflow-hidden">
+<!-- Top Left Logo -->
+<div class="z-10">
+<span class="font-headline-md text-headline-md font-bold text-on-surface-text text-[#1A1A1A]">letsgoIELTS</span>
+</div>
+<!-- Center 3D Trophy -->
+<div class="flex-grow flex items-center justify-center relative z-10 my-10">
+<img alt="Brand Illustration" class="illustration-blend max-w-[80%] max-h-[60vh] object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLs92JOk7bU5cJNidZwpXnTSN20H2gZDg1NTr1KN-6FRzv7p7ps9V7PMNuch-rViKefyUMuqKcWWU_jVt_l3lW4Hg8Gf4DMjdCkPpBGxM9S78T0H0kRsZtR5g7VkLE2dj06EdbGSiiH9XRINJquh0qPGeTOmV_YLivntul23GCyJNbxdsSKEbAk-GkgAMc2Hr9gDUnf9bCOsbcf4riTf1eP7cv18M_F14L3ViztEa4ySGaf0YD5Sy9UTOD8" style="mix-blend-mode: color-burn; opacity: 0.9; background: transparent; border-radius: 0;"/>
+</div>
+<!-- Bottom Center Quote -->
+<div class="z-10 text-center max-w-md mx-auto">
+<p class="font-title-lg text-title-lg text-on-surface-text text-[#1A1A1A]">Start your IELTS mastery today. Free tests, AI grading, and more!</p>
+</div>
+</div>
+<!-- Right Column (Sign Up Form) -->
+<div class="w-full md:w-1/2 bg-surface-white flex flex-col justify-center min-h-screen p-6 sm:p-10 lg:p-16">
+<!-- Mobile Logo (Visible only on small screens) -->
+<div class="md:hidden mb-8 text-center">
+<span class="font-headline-md text-headline-md font-bold text-on-surface-text">letsgoIELTS</span>
+</div>
+<div class="w-full max-w-md mx-auto">
+<!-- Header -->
+<div class="text-center mb-8">
+<h1 class="font-headline-lg text-headline-lg text-on-surface-text mb-2">Create an Account</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Join letsgoIELTS and accelerate your progress.</p>
+</div>
+<!-- Form -->
+<form class="space-y-5">
+<!-- Name Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div class="relative">
+<input class="block px-4 pb-2.5 pt-5 w-full text-body-lg text-on-surface bg-transparent rounded-lg border-2 border-outline appearance-none focus:outline-none focus:ring-0 focus:border-primary peer" id="firstName" placeholder=" " type="text"/>
+<label class="absolute text-label-lg text-on-surface-variant duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] bg-surface-white px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-4 peer-focus:scale-75 peer-focus:-translate-y-4 start-3 cursor-text" for="firstName">First Name</label>
+</div>
+<div class="relative">
+<input class="block px-4 pb-2.5 pt-5 w-full text-body-lg text-on-surface bg-transparent rounded-lg border-2 border-outline appearance-none focus:outline-none focus:ring-0 focus:border-primary peer" id="lastName" placeholder=" " type="text"/>
+<label class="absolute text-label-lg text-on-surface-variant duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] bg-surface-white px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-4 peer-focus:scale-75 peer-focus:-translate-y-4 start-3 cursor-text" for="lastName">Last Name</label>
+</div>
+</div>
+<!-- Email -->
+<div class="relative">
+<div class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<input class="block ps-11 pe-4 pb-2.5 pt-5 w-full text-body-lg text-on-surface bg-transparent rounded-lg border-2 border-outline appearance-none focus:outline-none focus:ring-0 focus:border-primary peer" id="email" placeholder=" " type="email"/>
+<label class="absolute text-label-lg text-on-surface-variant duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] bg-surface-white px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-4 peer-focus:scale-75 peer-focus:-translate-y-4 start-10 cursor-text" for="email">Email Address</label>
+</div>
+<!-- Target Band Dropdown -->
+<div class="relative">
+<select class="block px-4 pb-2.5 pt-5 w-full text-body-lg text-on-surface bg-transparent rounded-lg border-2 border-outline appearance-none focus:outline-none focus:ring-0 focus:border-primary peer cursor-pointer" id="targetBand">
+<option disabled="" hidden="" selected="" value=""></option>
+<option value="5.5">5.5</option>
+<option value="6.0">6.0</option>
+<option value="6.5">6.5</option>
+<option value="7.0">7.0</option>
+<option value="7.5">7.5</option>
+<option value="8.0+">8.0+</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 end-0 flex items-center px-4 text-on-surface-variant">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+<label class="absolute text-label-lg text-on-surface-variant duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] bg-surface-white px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-4 peer-focus:scale-75 peer-focus:-translate-y-4 start-3 cursor-text" for="targetBand">Your Target IELTS Band</label>
+</div>
+<!-- Password -->
+<div>
+<div class="relative">
+<input class="block px-4 pe-11 pb-2.5 pt-5 w-full text-body-lg text-on-surface bg-transparent rounded-lg border-2 border-outline appearance-none focus:outline-none focus:ring-0 focus:border-primary peer" id="password" placeholder=" " type="password"/>
+<label class="absolute text-label-lg text-on-surface-variant duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] bg-surface-white px-2 peer-focus:px-2 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-4 peer-focus:scale-75 peer-focus:-translate-y-4 start-3 cursor-text" for="password">Create Password</label>
+<button aria-label="Toggle password visibility" class="absolute inset-y-0 end-0 flex items-center pe-4 text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+<!-- Password Strength Indicator (Visual Only) -->
+<div class="mt-2 flex gap-1 h-1.5 w-full">
+<div class="h-full w-1/4 rounded-full bg-surface-dim"></div>
+<div class="h-full w-1/4 rounded-full bg-surface-dim"></div>
+<div class="h-full w-1/4 rounded-full bg-surface-dim"></div>
+<div class="h-full w-1/4 rounded-full bg-surface-dim"></div>
+</div>
+</div>
+<!-- Checkbox -->
+<div class="flex items-start gap-3 mt-4">
+<div class="flex items-center h-5">
+<input class="w-5 h-5 border-2 border-outline rounded text-primary focus:ring-primary bg-surface-white cursor-pointer" id="terms" type="checkbox"/>
+</div>
+<label class="font-body-md text-body-md text-on-surface-variant cursor-pointer" for="terms">
+                        I agree to the <a class="text-primary hover:underline" href="#">Terms of Service</a> and <a class="text-primary hover:underline" href="#">Privacy Policy</a>
+</label>
+</div>
+<!-- Primary CTA -->
+<button class="w-full h-12 bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase rounded-full hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 mt-6" type="button">
+                    Create Account
+                </button>
+</form>
+<!-- Divider -->
+<div class="flex items-center my-8">
+<div class="flex-1 border-t border-surface-variant"></div>
+<span class="px-4 font-label-lg text-label-lg text-outline">OR</span>
+<div class="flex-1 border-t border-surface-variant"></div>
+</div>
+<!-- Social Sign Up -->
+<div class="space-y-4">
+<button class="w-full h-12 flex items-center justify-center gap-3 bg-surface-white border-2 border-outline rounded-full text-on-surface font-label-lg text-label-lg hover:-translate-y-0.5 hover:bg-surface-container-low hover:shadow-sm transition-all duration-200" type="button">
+<!-- Placeholder for Google Icon -->
+<span class="w-5 h-5 rounded-full bg-surface-dim flex items-center justify-center text-[10px] text-on-surface-variant">G</span>
+                    Continue with Google
+                </button>
+<button class="w-full h-12 flex items-center justify-center gap-3 bg-surface-white border-2 border-outline rounded-full text-on-surface font-label-lg text-label-lg hover:-translate-y-0.5 hover:bg-surface-container-low hover:shadow-sm transition-all duration-200" type="button">
+<!-- Placeholder for Facebook Icon -->
+<span class="w-5 h-5 rounded bg-[#1877F2] text-white flex items-center justify-center text-[12px] font-bold">f</span>
+                    Continue with Facebook
+                </button>
+</div>
+<!-- Login Link -->
+<div class="mt-8 text-center font-body-md text-body-md text-on-surface-variant">
+                Already have an account? <a class="text-primary font-bold hover:underline" href="#">Log in</a>
+</div>
+</div>
+</div>
+</body></html>
