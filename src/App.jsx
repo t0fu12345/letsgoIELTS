@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -13,7 +13,7 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -25,7 +25,7 @@ function App() {
         <Route path="/speaking" element={<ProtectedRoute><SpeakingRoom /></ProtectedRoute>} />
         <Route path="/statistic" element={<ProtectedRoute><Statistic /></ProtectedRoute>} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
