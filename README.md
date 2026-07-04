@@ -1,16 +1,44 @@
-# React + Vite
+# letsgoIELTS
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Welcome to **letsgoIELTS** – your ultimate platform for IELTS preparation! This interactive, modern React application features a beautiful interface, intuitive dashboard, and comprehensive skill rooms designed to help you ace your exam.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Check out the live application hosted on GitHub Pages:
+[**Run letsgoIELTS Live**](https://t0fu12345.github.io/letsgoIELTS/)
 
-## React Compiler
+> [!WARNING]  
+> **Note on Authentication:** The live GitHub Pages deployment serves only static files. As a result, the mock backend (`db.json`) used for authentication in the local environment is not available in the live demo. Authentication actions (Signup/Login) may fail or have limited functionality on the live site. To fully experience the authentication flow, please run the project locally.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the Oxlint configuration
+- **Modern Landing Page:** A stunning, responsive hero section.
+- **Authentication:** Mock signup and login flows.
+- **Student Dashboard:** Central hub tracking your progress.
+- **Skill Rooms:** Dedicated environments for Listening, Reading, Writing, and Speaking practice.
+- **Statistics:** Data visualizations to track your band scores and activity.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🛠️ Local Development
+
+To run this project locally with full backend functionality (including the Vite mock API for authentication):
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/t0fu12345/letsgoIELTS.git
+   cd letsgoIELTS
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser:**
+   Navigate to `http://localhost:5173`
+
+Happy studying, and let's go get that high score!
